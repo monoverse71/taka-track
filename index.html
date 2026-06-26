@@ -16,7 +16,6 @@
 body.light{--bg:#f0f4ff;--card:#fff;--c2:#f7f9ff;--bd:rgba(0,0,0,.07);--text:#0d1120;--mu:rgba(0,0,0,.42);--inp:#e8edf8}
 html,body{height:100%;overflow:hidden}
 body{font-family:-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column}
-/* SPLASH */
 #spl{position:fixed;inset:0;background:#0a0e1a;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity .4s;padding-bottom:50px}
 #spl .br{font-size:28px;font-weight:800;letter-spacing:1px;color:#fff}
 #spl .br span{color:#00c87a}
@@ -25,7 +24,6 @@ body{font-family:-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--
 #spprog{height:100%;width:0;background:linear-gradient(90deg,#00c87a,#3d8bff);border-radius:4px}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 .la{animation:pulse 1.8s ease-in-out infinite}
-/* PIN */
 #pins{position:fixed;inset:0;background:#0a0e1a;z-index:998;display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px}
 .pds{display:flex;gap:13px}
 .pd{width:13px;height:13px;border-radius:50%;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.25);transition:all .18s}
@@ -33,7 +31,6 @@ body{font-family:-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--
 .ppad{display:grid;grid-template-columns:repeat(3,66px);gap:10px}
 .pk{height:66px;border-radius:50%;background:var(--c2);border:.5px solid var(--bd);color:var(--text);font-size:20px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:inherit;transition:all .14s}
 .pk:active{transform:scale(.9);background:var(--pu)}
-/* APP */
 #app{flex:1;display:flex;flex-direction:column;overflow:hidden;padding-top:var(--st)}
 .hdr{background:var(--card);border-bottom:.5px solid var(--bd);padding:10px 14px 9px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
 .pages{flex:1;overflow:hidden;position:relative}
@@ -46,7 +43,6 @@ body{font-family:-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--
 .ni{font-size:19px;transition:transform .18s}
 .fab{position:fixed;bottom:calc(66px + var(--sb));right:15px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#7c6fff,#3d8bff);border:none;color:#fff;font-size:24px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 18px rgba(124,111,255,.45);transition:transform .13s}
 .fab:active{transform:scale(.9)}
-/* CARDS */
 .c{background:var(--card);border-radius:var(--r);border:.5px solid var(--bd);padding:13px;margin-bottom:10px}
 .hero{background:linear-gradient(135deg,#0d1529,#141f3a 55%,#0d1529);border-radius:var(--r);padding:18px 15px;margin-bottom:11px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-30px;right:-30px;width:130px;height:130px;background:radial-gradient(circle,rgba(0,200,122,.13),transparent 70%);border-radius:50%}
@@ -104,16 +100,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--pu)}
 .curbdg{background:var(--pud);color:var(--pu);border-radius:7px;padding:3px 9px;font-size:11px;font-weight:600;cursor:pointer}
 .ver{background:var(--pud);color:var(--pu);border-radius:20px;padding:3px 12px;font-size:10px;font-weight:600;display:inline-block;margin-top:4px}
 .dtag{font-size:10px;color:var(--mu);font-weight:600;padding:6px 0 2px;letter-spacing:.5px;text-transform:uppercase}
-.tag{border-radius:5px;padding:2px 7px;font-size:10px;font-weight:600}
-/* Business specific */
-.biz-card{background:var(--c2);border-radius:var(--r);border:.5px solid var(--bd);padding:14px;margin-bottom:9px;cursor:pointer;transition:all .15s}
-.biz-card:active{transform:scale(.98)}
-.biz-type-badge{background:var(--pud);color:var(--pu);border-radius:6px;padding:2px 8px;font-size:10px;font-weight:600}
-.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-.acc-card{background:var(--c2);border-radius:var(--rs);padding:11px 12px}
-.acc-lbl{font-size:10px;color:var(--mu);margin-bottom:3px}
-.acc-val{font-size:15px;font-weight:700}
-.tab-bar{display:flex;gap:0;border-bottom:.5px solid var(--bd);margin-bottom:12px;overflow-x:auto}
+.tab-bar{display:flex;gap:0;border-bottom:.5px solid var(--bd);margin-bottom:12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .tab-btn{flex-shrink:0;padding:8px 14px;background:none;border:none;border-bottom:2.5px solid transparent;color:var(--mu);font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .18s}
 .tab-btn.active{color:var(--pu);border-bottom-color:var(--pu)}
 .status-badge{border-radius:5px;padding:2px 8px;font-size:10px;font-weight:600}
@@ -123,7 +110,22 @@ input:focus,select:focus,textarea:focus{border-color:var(--pu)}
 .sb-paid{background:var(--gd);color:var(--gr)}
 .sb-partial{background:rgba(245,158,11,.15);color:#f59e0b}
 .sb-unpaid{background:var(--rdd);color:var(--rd)}
-.low-stock{background:rgba(245,158,11,.12);border:.5px solid rgba(245,158,11,.3);border-radius:var(--rs);padding:9px 12px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.biz-card{background:var(--c2);border-radius:var(--r);border:.5px solid var(--bd);padding:14px;margin-bottom:9px;cursor:pointer;transition:all .15s}
+.biz-card:active{transform:scale(.98)}
+.biz-type-badge{background:var(--pud);color:var(--pu);border-radius:6px;padding:2px 8px;font-size:10px;font-weight:600}
+.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.acc-card{background:var(--c2);border-radius:var(--rs);padding:11px 12px}
+.acc-lbl{font-size:10px;color:var(--mu);margin-bottom:3px}
+.acc-val{font-size:15px;font-weight:700}
+.low-stock-bar{background:rgba(245,158,11,.1);border:.5px solid rgba(245,158,11,.35);border-radius:var(--rs);padding:10px 12px;margin-bottom:8px;position:relative}
+.due-row{padding:8px 0;border-bottom:.5px solid var(--bd);font-size:12px}
+.due-row:last-child{border-bottom:none}
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:10px}
+.info-box{background:var(--c2);border-radius:var(--rs);padding:10px 8px;text-align:center}
+.info-lbl{font-size:9px;color:var(--mu);margin-bottom:2px}
+.info-val{font-size:13px;font-weight:700}
+.ledger-row{padding:7px 0;border-bottom:.5px solid var(--bd);font-size:11px}
+.ledger-row:last-child{border-bottom:none}
 @media(min-width:440px){.fab{right:calc(50% - 205px)}.nav{max-width:440px;left:50%;transform:translateX(-50%)}}
 </style>
 </head>
@@ -132,26 +134,13 @@ input:focus,select:focus,textarea:focus{border-color:var(--pu)}
 <div id="pins"><div id="pl"></div><div style="font-size:17px;font-weight:600">Enter PIN</div><div class="pds"><div class="pd" id="p0"></div><div class="pd" id="p1"></div><div class="pd" id="p2"></div><div class="pd" id="p3"></div></div><div style="color:var(--rd);font-size:11px;height:14px" id="perr"></div><div class="ppad"><button class="pk" onclick="pk('1')">1</button><button class="pk" onclick="pk('2')">2</button><button class="pk" onclick="pk('3')">3</button><button class="pk" onclick="pk('4')">4</button><button class="pk" onclick="pk('5')">5</button><button class="pk" onclick="pk('6')">6</button><button class="pk" onclick="pk('7')">7</button><button class="pk" onclick="pk('8')">8</button><button class="pk" onclick="pk('9')">9</button><button class="pk" onclick="pk('x')">⌫</button><button class="pk" onclick="pk('0')">0</button><button class="pk" onclick="pk('ok')">→</button></div></div>
 
 <div id="app" style="display:none">
-<div class="hdr">
-  <div><div style="font-size:16px;font-weight:700;letter-spacing:.2px" id="hn">Taka Track</div><div style="font-size:10px;color:var(--mu)" id="hm">Loading...</div></div>
-  <div style="display:flex;gap:7px;align-items:center"><span class="curbdg" id="curd" onclick="showTab('settings')">BDT</span><button onclick="toggleTheme()" style="background:var(--inp);border:.5px solid var(--bd);border-radius:20px;padding:4px 11px;cursor:pointer;color:var(--text);font-size:12px" id="tbtn">☀</button></div>
-</div>
+<div class="hdr"><div><div style="font-size:16px;font-weight:700;letter-spacing:.2px" id="hn">Taka Track</div><div style="font-size:10px;color:var(--mu)" id="hm">Loading...</div></div><div style="display:flex;gap:7px;align-items:center"><span class="curbdg" id="curd" onclick="showTab('settings')">BDT</span><button onclick="toggleTheme()" style="background:var(--inp);border:.5px solid var(--bd);border-radius:20px;padding:4px 11px;cursor:pointer;color:var(--text);font-size:12px" id="tbtn">☀</button></div></div>
 <div id="abr" class="abr"></div>
 <div class="pages">
 
 <!-- DASHBOARD -->
 <div class="pg active" id="page-dashboard">
-  <div class="hero">
-    <div class="hlbl">Total Balance</div>
-    <div id="hbal" style="font-size:30px;font-weight:700;margin-bottom:11px">0</div>
-    <div class="hrow">
-      <div class="hi"><div class="hilbl">Income</div><div class="hiv" id="hinc" style="color:var(--gr)">0</div></div>
-      <div class="hdv"></div>
-      <div class="hi"><div class="hilbl">Expense</div><div class="hiv" id="hexp" style="color:var(--rd)">0</div></div>
-      <div class="hdv"></div>
-      <div class="hi"><div class="hilbl">Business</div><div class="hiv" id="hbiz" style="color:var(--pu)">0</div></div>
-    </div>
-  </div>
+  <div class="hero"><div class="hlbl">Total Balance</div><div id="hbal" style="font-size:30px;font-weight:700;margin-bottom:11px">0</div><div class="hrow"><div class="hi"><div class="hilbl">Income</div><div class="hiv" id="hinc" style="color:var(--gr)">0</div></div><div class="hdv"></div><div class="hi"><div class="hilbl">Expense</div><div class="hiv" id="hexp" style="color:var(--rd)">0</div></div><div class="hdv"></div><div class="hi"><div class="hilbl">Business</div><div class="hiv" id="hbiz" style="color:var(--pu)">0</div></div></div></div>
   <div class="c"><div class="stit">Spending by Category</div><div id="cbars"><div class="empty"><div class="ei">📊</div>No data yet</div></div></div>
   <div class="c"><div class="row" style="margin-bottom:9px"><div class="stit">Recent Transactions</div><span onclick="showTab('transactions')" style="font-size:11px;color:var(--bl);cursor:pointer;font-weight:500">See all →</span></div><div id="dtxl"><div class="empty"><div class="ei">💸</div>No transactions yet</div></div></div>
 </div>
@@ -159,19 +148,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--pu)}
 <!-- TRANSACTIONS -->
 <div class="pg" id="page-transactions">
   <div style="position:relative;margin-bottom:9px"><span style="position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--mu);font-size:14px;pointer-events:none">🔍</span><input id="txs" style="padding-left:33px" placeholder="Search..." oninput="renderTx()"/></div>
-  <div style="display:flex;gap:5px;margin-bottom:9px;overflow-x:auto;padding-bottom:2px">
-    <button class="pill ap" onclick="sf('all',this)">All</button>
-    <button class="pill" onclick="sf('income',this)">Income</button>
-    <button class="pill" onclick="sf('expense',this)">Expense</button>
-    <input type="month" id="fmon" onchange="renderTx()" style="width:auto;padding:4px 9px;font-size:11px;flex-shrink:0"/>
-  </div>
+  <div style="display:flex;gap:5px;margin-bottom:9px;overflow-x:auto;padding-bottom:2px"><button class="pill ap" onclick="sf('all',this)">All</button><button class="pill" onclick="sf('income',this)">Income</button><button class="pill" onclick="sf('expense',this)">Expense</button><input type="month" id="fmon" onchange="renderTx()" style="width:auto;padding:4px 9px;font-size:11px;flex-shrink:0"/></div>
   <div id="txl"></div>
 </div>
 
 <!-- BUSINESS -->
-<div class="pg" id="page-business">
-  <div id="biz-root"></div>
-</div>
+<div class="pg" id="page-business"><div id="biz-root"></div></div>
 
 <!-- REPORTS -->
 <div class="pg" id="page-reports">
@@ -195,65 +177,134 @@ input:focus,select:focus,textarea:focus{border-color:var(--pu)}
   </div>
   <div class="c"><div class="stit">Data Management</div><div style="display:grid;gap:8px"><button class="btn btp" onclick="doBackup()" style="font-size:12px">Backup (JSON)</button><button class="btn btgh" onclick="doRestore()" style="font-size:12px">Restore Backup</button><input type="file" id="rfile" accept=".json" style="display:none" onchange="handleRestore(event)"/></div></div>
   <div class="c"><div class="stit">Share App</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:7px"><button class="btn" style="background:#25D366;color:#fff;font-size:12px" onclick="share('wa')">WhatsApp</button><button class="btn" style="background:#0088cc;color:#fff;font-size:12px" onclick="share('tg')">Telegram</button><button class="btn" style="background:#1877F2;color:#fff;font-size:12px" onclick="share('fb')">Facebook</button><button class="btn btgh" style="font-size:12px" onclick="share('cp')">Copy Link</button></div><div style="font-size:11px;color:var(--gr);text-align:center;margin-top:6px;height:14px" id="scop"></div></div>
-  <div class="c" style="text-align:center;padding:16px"><div id="abl"></div><div style="font-size:17px;font-weight:800;letter-spacing:1px;margin-top:9px">TAKA TRACK</div><div style="font-size:11px;color:var(--mu);margin-top:3px">Smart Finance Manager</div><div class="ver">v5.0.0 Production</div><div style="font-size:10px;color:var(--mu);margin-top:7px">© 2025 Taka Track</div></div>
+  <div class="c" style="text-align:center;padding:16px"><div id="abl"></div><div style="font-size:17px;font-weight:800;letter-spacing:1px;margin-top:9px">TAKA TRACK</div><div style="font-size:11px;color:var(--mu);margin-top:3px">Smart Finance Manager</div><div class="ver">v5.1.0 Production</div><div style="font-size:10px;color:var(--mu);margin-top:7px">© 2025 Taka Track</div></div>
   <div class="c" style="margin-bottom:20px"><button class="btn" style="background:rgba(255,77,109,.12);color:var(--rd);border:.5px solid rgba(255,77,109,.25)" onclick="clearAll()">Clear All Data</button></div>
 </div>
-
-</div><!-- pages -->
-<nav class="nav">
-  <button class="nb active" onclick="showTab('dashboard')" id="nav-dashboard"><span class="ni">⊞</span><span id="nld">Home</span></button>
-  <button class="nb" onclick="showTab('transactions')" id="nav-transactions"><span class="ni">⇄</span><span id="nlt">Txns</span></button>
-  <button class="nb" onclick="showTab('business')" id="nav-business"><span class="ni">🏢</span><span id="nlb">Business</span></button>
-  <button class="nb" onclick="showTab('reports')" id="nav-reports"><span class="ni">📊</span><span id="nlr">Reports</span></button>
-  <button class="nb" onclick="showTab('settings')" id="nav-settings"><span class="ni">⚙</span><span id="nls">Settings</span></button>
-</nav>
-<button class="fab" id="mainfab" onclick="openModal()">＋</button>
-</div><!-- app -->
-
-<!-- PERSONAL TX MODAL -->
-<div class="mbg" id="modal">
-  <div class="mdl">
-    <div class="mh"></div>
-    <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700" id="mtitle">Add Transaction</span><button onclick="closeModal('modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-    <div class="prow"><button class="pill" id="mib" onclick="setTT('income')">Income</button><button class="pill ar" id="meb" onclick="setTT('expense')">Expense</button></div>
-    <div class="f"><label class="lbl">Category</label><select id="mcat" onchange="chkO()"></select></div>
-    <div class="f" id="ocf" style="display:none"><label class="lbl">Custom Category</label><input id="ocv" placeholder="Type here..."/></div>
-    <div style="display:grid;grid-template-columns:1fr 92px;gap:8px;margin-bottom:9px">
-      <div><label class="lbl">Amount</label><input id="mamt" type="number" placeholder="0" oninput="convShow()"/></div>
-      <div><label class="lbl">Currency</label><select id="mcur" onchange="convShow()"><option>BDT</option><option>USD</option><option>EUR</option><option>GBP</option><option>INR</option><option>SAR</option></select></div>
-    </div>
-    <div id="mconv" style="display:none;background:var(--bld);border:.5px solid rgba(61,139,255,.2);border-radius:var(--rs);padding:7px 11px;font-size:11px;color:var(--bl);margin-bottom:9px;font-weight:500"></div>
-    <div class="f"><label class="lbl">Note</label><input id="mnote" placeholder="Note..."/></div>
-    <div class="f"><label class="lbl">Date</label><input id="mdate" type="date"/></div>
-    <div class="row" style="margin-bottom:13px"><div><div style="font-size:12px;font-weight:500">Recurring</div><div style="font-size:10px;color:var(--mu)">Monthly auto-entry</div></div><div class="tgl" id="trec" onclick="togRec()"><div class="tth" id="trect"></div></div></div>
-    <input type="hidden" id="eid"/>
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px"><button class="btn btgh" onclick="closeModal('modal')">Cancel</button><button class="btn btp" id="msave" onclick="saveTx()">Save</button></div>
-  </div>
 </div>
 
-<!-- BUSINESS MODALS -->
-<div class="mbg" id="biz-modal"><div class="mdl"><div class="mh"></div><div id="biz-modal-body"></div></div></div>
+<nav class="nav"><button class="nb active" onclick="showTab('dashboard')" id="nav-dashboard"><span class="ni">⊞</span><span id="nld">Home</span></button><button class="nb" onclick="showTab('transactions')" id="nav-transactions"><span class="ni">⇄</span><span id="nlt">Txns</span></button><button class="nb" onclick="showTab('business')" id="nav-business"><span class="ni">🏢</span><span id="nlb">Business</span></button><button class="nb" onclick="showTab('reports')" id="nav-reports"><span class="ni">📊</span><span id="nlr">Reports</span></button><button class="nb" onclick="showTab('settings')" id="nav-settings"><span class="ni">⚙</span><span id="nls">Settings</span></button></nav>
+<button class="fab" id="mainfab" onclick="openModal()">＋</button>
+</div>
+
+<!-- PERSONAL TX MODAL -->
+<div class="mbg" id="modal"><div class="mdl"><div class="mh"></div><div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700" id="mtitle">Add Transaction</span><button onclick="closeModal('modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div><div class="prow"><button class="pill" id="mib" onclick="setTT('income')">Income</button><button class="pill ar" id="meb" onclick="setTT('expense')">Expense</button></div><div class="f"><label class="lbl">Category</label><select id="mcat" onchange="chkO()"></select></div><div class="f" id="ocf" style="display:none"><label class="lbl">Custom Category</label><input id="ocv" placeholder="Type here..."/></div><div style="display:grid;grid-template-columns:1fr 92px;gap:8px;margin-bottom:9px"><div><label class="lbl">Amount</label><input id="mamt" type="number" placeholder="0" oninput="convShow()"/></div><div><label class="lbl">Currency</label><select id="mcur" onchange="convShow()"><option>BDT</option><option>USD</option><option>EUR</option><option>GBP</option><option>INR</option><option>SAR</option></select></div></div><div id="mconv" style="display:none;background:var(--bld);border:.5px solid rgba(61,139,255,.2);border-radius:var(--rs);padding:7px 11px;font-size:11px;color:var(--bl);margin-bottom:9px;font-weight:500"></div><div class="f"><label class="lbl">Note</label><input id="mnote" placeholder="Note..."/></div><div class="f"><label class="lbl">Date</label><input id="mdate" type="date"/></div><div class="row" style="margin-bottom:13px"><div><div style="font-size:12px;font-weight:500">Recurring</div><div style="font-size:10px;color:var(--mu)">Monthly auto-entry</div></div><div class="tgl" id="trec" onclick="togRec()"><div class="tth" id="trect"></div></div></div><input type="hidden" id="eid"/><div style="display:grid;grid-template-columns:1fr 2fr;gap:8px"><button class="btn btgh" onclick="closeModal('modal')">Cancel</button><button class="btn btp" id="msave" onclick="saveTx()">Save</button></div></div></div>
+
+<!-- GROCERY MODAL -->
+<div class="mbg" id="gmodal"><div class="mdl"><div class="mh"></div><div id="gmodal-body"></div></div></div>
+<!-- BIZ CREATE/EDIT MODAL -->
+<div class="mbg" id="bmodal"><div class="mdl"><div class="mh"></div><div id="bmodal-body"></div></div></div>
 <!-- PIN MODAL -->
 <div class="mbg" id="pmodal"><div class="mdl"><div class="mh"></div><div style="font-size:15px;font-weight:700;margin-bottom:13px">Set PIN Lock</div><div class="f"><label class="lbl">New 4-digit PIN</label><input id="npin" type="password" maxlength="4" inputmode="numeric" placeholder="••••"/></div><div class="f"><label class="lbl">Confirm PIN</label><input id="cpin" type="password" maxlength="4" inputmode="numeric" placeholder="••••"/></div><div style="color:var(--rd);font-size:11px;margin-bottom:8px;height:14px" id="pmerr"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn btgh" onclick="closeModal('pmodal')">Cancel</button><button class="btn btp" onclick="savePin()">Set PIN</button></div></div></div>
 
 <script>
-// ══════════════════════════════════════════════════════════
-// UTILITIES
-// ══════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// CORE UTILITIES
+// ══════════════════════════════════════════════════
 function svgUri(s){return'data:image/svg+xml,'+encodeURIComponent(s);}
 const LOGO=`<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a2a4a"/><stop offset="100%" stop-color="#0a0e1a"/></radialGradient><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c0c8d8"/><stop offset="100%" stop-color="#8898aa"/></linearGradient><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00ff9a"/><stop offset="100%" stop-color="#00c87a"/></linearGradient><linearGradient id="g4" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#00c87a"/><stop offset="100%" stop-color="#00ff9a"/></linearGradient><filter id="gw"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="120" height="120" rx="26" fill="url(#g1)"/><circle cx="52" cy="50" r="26" fill="none" stroke="url(#g2)" stroke-width="5"/><text x="52" y="61" font-size="22" font-weight="900" text-anchor="middle" fill="url(#g3)" filter="url(#gw)" font-family="Arial,sans-serif">Tk</text><line x1="72" y1="70" x2="92" y2="90" stroke="#5a6878" stroke-width="7" stroke-linecap="round"/><line x1="72" y1="70" x2="92" y2="90" stroke="url(#g2)" stroke-width="4" stroke-linecap="round"/><polyline points="70,100 78,84 86,90 96,70" fill="none" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><polygon points="96,70 93,76 99,76" fill="#00c87a"/></svg>`;
 function setLogo(id,sz){const e=document.getElementById(id);if(!e)return;e.innerHTML=`<img src="${svgUri(LOGO)}" width="${sz}" height="${sz}" style="border-radius:${Math.round(sz*.22)}px"/>`;}
-function uid(){return Date.now()+Math.random().toString(36).slice(2,7);}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
 function nowD(){return new Date().toISOString().split("T")[0];}
 function nowM(){const n=new Date();return`${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,"0")}`;}
 function nowY(){return String(new Date().getFullYear());}
 function weekS(){const d=new Date();d.setDate(d.getDate()-d.getDay());return d.toISOString().split("T")[0];}
 function inRange(d,s,e){return d>=s&&d<=e;}
 function esc(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function nowTs(){return new Date().toISOString();}
+function fmtTime(ts){if(!ts)return"";try{return new Date(ts).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"});}catch(e){return"";}}
 
-// ══════════════════════════════════════════════════════════
-// STATE
-// ══════════════════════════════════════════════════════════
+// Business Day: 6AM → 5:59AM next day
+function bizDay(dateStr){
+  // Returns the business day key (YYYY-MM-DD) for a given ISO timestamp or date string
+  if(!dateStr)return nowD();
+  const d=new Date(typeof dateStr==="string"&&dateStr.includes("T")?dateStr:dateStr+"T06:00:00");
+  // The business day is the calendar date at 6am that started this day
+  const h=new Date(dateStr.includes("T")?dateStr:dateStr+"T00:00:00").getHours();
+  if(typeof dateStr==="string"&&dateStr.includes("T")){
+    const dt=new Date(dateStr);
+    const h2=dt.getHours();
+    if(h2<6){const prev=new Date(dt);prev.setDate(prev.getDate()-1);return prev.toISOString().split("T")[0];}
+    return dt.toISOString().split("T")[0];
+  }
+  return dateStr.split("T")[0];
+}
+function bizDayToday(){return bizDay(new Date().toISOString());}
+function bizDayYesterday(){const d=new Date();d.setDate(d.getDate()-1);return bizDay(d.toISOString());}
+
+// ══════════════════════════════════════════════════
+// TRANSLATIONS
+// ══════════════════════════════════════════════════
+const GL={
+  en:{
+    myBiz:"My Businesses",newBiz:"+ New",dashboard:"Dashboard",ledger:"Ledger",reports:"Reports",
+    clients:"Clients",projects:"Projects",inventory:"Inventory",dues:"Dues",shortlist:"Shortlist",costs:"Costs",
+    addProduct:"Add Product",recordSale:"Record Sale",recordPurchase:"Record Purchase",
+    addCost:"Add Business Cost",addCustDue:"Add Customer Due",addCompDue:"Add Company Due",
+    todaySales:"Today's Sales",todayPurchase:"Today's Purchase",todayProfit:"Today's Profit",
+    yestSales:"Yesterday Sales",yestPurchase:"Yesterday Purchase",
+    totalRevenue:"Total Revenue",netProfit:"Net Profit",totalExpense:"Total Expenses",
+    cashBalance:"Cash Balance",invValue:"Inventory Value",lowStock:"Low Stock Items",
+    custDue:"Customer Due",compDue:"Company Due",
+    productName:"Product Name",category:"Category",quantity:"Quantity",
+    totalPurchaseCost:"Total Purchase Cost",buyPricePerPc:"Buy Price / Piece",
+    sellPricePerPc:"Sell Price / Piece",minStock:"Low Stock Alert (Qty)",
+    selectProduct:"Select Product",qtySold:"Qty to Sell",sellingPrice:"Selling Price",account:"Account",
+    date:"Date",notes:"Notes",save:"Save",cancel:"Cancel",
+    revenue:"Revenue",cogs:"COGS",profit:"Profit",loss:"Loss",
+    costType:"Cost Type",amount:"Amount",
+    customerName:"Customer Name",phone:"Phone",totalAmt:"Total Amount",paidAmt:"Paid Amount",
+    companyName:"Company Name",supplierName:"Supplier Name",address:"Address",
+    addTransaction:"Add Transaction",payment:"Payment",
+    backToList:"‹ Back",edit:"Edit",delete:"Delete",
+    noProducts:"No products yet",noTx:"No transactions yet",
+    lowStockAlert:"⚠️ Low Stock Alert",
+    shortlistTitle:"Purchase Shortlist",manualAdd:"+ Manual Add",remove:"Remove",
+    autoItem:"Auto",manualItem:"Manual",
+    buyBelow:"Selling below purchase price — recording loss",
+    insufficientStock:"Insufficient stock",
+    invalidInput:"Invalid input",
+    costTypes:["Shop Rent","Electricity","Staff Salary","Internet","Transport","Packaging","Cleaning","Others"],
+    bizTypes:["Freelancer","Grocery Store","Agency","Online Shop","Import Business","Custom Business"],
+    accs:["Cash","bKash","Nagad","Bank"],
+  },
+  bn:{
+    myBiz:"আমার ব্যবসা",newBiz:"+ নতুন",dashboard:"ড্যাশবোর্ড",ledger:"লেজার",reports:"রিপোর্ট",
+    clients:"ক্লায়েন্ট",projects:"প্রজেক্ট",inventory:"ইনভেন্টরি",dues:"বাকি",shortlist:"শর্টলিস্ট",costs:"খরচ",
+    addProduct:"পণ্য যোগ করুন",recordSale:"বিক্রয় রেকর্ড",recordPurchase:"কেনাকাটা রেকর্ড",
+    addCost:"ব্যবসায়িক খরচ যোগ",addCustDue:"কাস্টমার বাকি যোগ",addCompDue:"কোম্পানি বাকি যোগ",
+    todaySales:"আজকের বিক্রয়",todayPurchase:"আজকের কেনাকাটা",todayProfit:"আজকের মুনাফা",
+    yestSales:"গতকালের বিক্রয়",yestPurchase:"গতকালের কেনাকাটা",
+    totalRevenue:"মোট আয়",netProfit:"নিট মুনাফা",totalExpense:"মোট ব্যয়",
+    cashBalance:"নগদ ব্যালেন্স",invValue:"ইনভেন্টরি মূল্য",lowStock:"কম স্টক আইটেম",
+    custDue:"কাস্টমার বাকি",compDue:"কোম্পানি বাকি",
+    productName:"পণ্যের নাম",category:"ক্যাটাগরি",quantity:"পরিমাণ",
+    totalPurchaseCost:"মোট ক্রয় মূল্য",buyPricePerPc:"ক্রয় মূল্য / পিস",
+    sellPricePerPc:"বিক্রয় মূল্য / পিস",minStock:"কম স্টক সতর্কতা (পরিমাণ)",
+    selectProduct:"পণ্য নির্বাচন করুন",qtySold:"বিক্রয় পরিমাণ",sellingPrice:"বিক্রয় মূল্য",account:"একাউন্ট",
+    date:"তারিখ",notes:"নোট",save:"সংরক্ষণ",cancel:"বাতিল",
+    revenue:"রাজস্ব",cogs:"ক্রয়মূল্য",profit:"মুনাফা",loss:"ক্ষতি",
+    costType:"খরচের ধরন",amount:"পরিমাণ",
+    customerName:"কাস্টমারের নাম",phone:"ফোন",totalAmt:"মোট পরিমাণ",paidAmt:"পরিশোধিত",
+    companyName:"কোম্পানির নাম",supplierName:"সাপ্লায়ারের নাম",address:"ঠিকানা",
+    addTransaction:"লেনদেন যোগ করুন",payment:"পেমেন্ট",
+    backToList:"‹ ফিরুন",edit:"সম্পাদনা",delete:"মুছুন",
+    noProducts:"এখনো কোনো পণ্য নেই",noTx:"কোনো লেনদেন নেই",
+    lowStockAlert:"⚠️ কম স্টক সতর্কতা",
+    shortlistTitle:"কেনার শর্টলিস্ট",manualAdd:"+ ম্যানুয়াল যোগ",remove:"সরান",
+    autoItem:"অটো",manualItem:"ম্যানুয়াল",
+    buyBelow:"বিক্রয়মূল্য ক্রয়মূল্যের নিচে — ক্ষতি রেকর্ড হচ্ছে",
+    insufficientStock:"পর্যাপ্ত স্টক নেই",
+    invalidInput:"অবৈধ ইনপুট",
+    costTypes:["দোকান ভাড়া","বিদ্যুৎ","কর্মী বেতন","ইন্টারনেট","পরিবহন","প্যাকেজিং","পরিষ্কার","অন্যান্য"],
+    bizTypes:["ফ্রিল্যান্সার","মুদি দোকান","এজেন্সি","অনলাইন শপ","আমদানি ব্যবসা","কাস্টম ব্যবসা"],
+    accs:["নগদ","বিকাশ","নগদ (মোবাইল)","ব্যাংক"],
+  }
+};
+function gl(k){return(GL[S.lang]||GL.en)[k]||k;}
+
+// ══════════════════════════════════════════════════
+// PERSONAL FINANCE CONSTANTS
+// ══════════════════════════════════════════════════
 const IC={bn:["বেতন","ব্যবসায়িক বিক্রয়","ফ্রিল্যান্সিং","উপহার","বিনিয়োগ","ভাড়া আয়","বোনাস","কমিশন","পেনশন","অন্যান্য"],en:["Salary","Business Sales","Freelancing","Gift","Investment","Rental","Bonus","Commission","Pension","Others"]};
 const EC={bn:["খাবার","যাতায়াত","কেনাকাটা","বিল","ভাড়া","চিকিৎসা","শিক্ষা","বিনোদন","মুদি","পোশাক","জ্বালানি","ইন্টারনেট","বিমা","সাবস্ক্রিপশন","মেরামত","ভ্রমণ","অন্যান্য"],en:["Food","Transport","Shopping","Bills","Rent","Medical","Education","Entertainment","Groceries","Clothing","Fuel","Internet","Insurance","Subscriptions","Repair","Travel","Others"]};
 const CC={"Food":"#ff4d6d","খাবার":"#ff4d6d","Salary":"#00c87a","বেতন":"#00c87a","Transport":"#3d8bff","যাতায়াত":"#3d8bff","Shopping":"#e040fb","কেনাকাটা":"#e040fb","Bills":"#f59e0b","বিল":"#f59e0b","Rent":"#7c6fff","ভাড়া":"#7c6fff","Medical":"#00bcd4","চিকিৎসা":"#00bcd4","Education":"#8bc34a","শিক্ষা":"#8bc34a","Entertainment":"#ff7043","বিনোদন":"#ff7043","Freelancing":"#00c87a","ফ্রিল্যান্সিং":"#00c87a","Others":"#78909c","অন্যান্য":"#78909c"};
@@ -264,26 +315,41 @@ const BIZ_TYPES=["Freelancer","Grocery Store","Agency","Online Shop","Import Bus
 const BIZ_ICONS={Freelancer:"💻","Grocery Store":"🛒",Agency:"🏢","Online Shop":"📦","Import Business":"🌍","Custom Business":"⚙"};
 const ACCS=["Cash","bKash","Nagad","Bank"];
 
+// ══════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════
 let S={
   lang:"en",theme:"dark",txs:[],budgets:{...BD},
   pin:"",pinEnabled:false,currency:"BDT",customRates:{},
-  txType:"expense",recurForm:false,editId:null,rperiod:"month",
-  filterType:"all",
-  businesses:[],   // array of business objects
-  activeBizId:null // currently selected business id
+  txType:"expense",recurForm:false,editId:null,rperiod:"month",filterType:"all",
+  businesses:[],activeBizId:null,
+  dismissedLowStock:{}  // {bizId: Set of productIds dismissed}
 };
+// bizTab is per-business, stored outside S to avoid serialization issues
+let bizTabState={};
+function getBizTab(bizId){return bizTabState[bizId]||"dashboard";}
+function setBizTab(bizId,tab){bizTabState[bizId]=tab;}
 
-function loadS(){try{const d=localStorage.getItem("tt5");if(d){const p=JSON.parse(d);S={...S,...p};}}catch(e){}}
-function saveS(){try{localStorage.setItem("tt5",JSON.stringify(S));}catch(e){}}
+function loadS(){
+  try{
+    const d=localStorage.getItem("tt51");
+    if(d){const p=JSON.parse(d);S={...S,...p};}
+  }catch(e){}
+}
+function saveS(){try{localStorage.setItem("tt51",JSON.stringify(S));}catch(e){}}
 
-// ══════════════════════════════════════════════════════════
-// PERSONAL FINANCE — unchanged logic
-// ══════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// CURRENCY & FORMAT
+// ══════════════════════════════════════════════════
 function sym(){return CS[S.currency]||"Tk";}
 function gr(cur){if(!cur||cur===S.currency)return 1;const a=S.customRates[cur]||BR[cur]||1;const b=S.customRates[S.currency]||BR[S.currency]||1;return a/b;}
-function fa(n){const a=Math.abs(n);return(n<0?"-":"")+sym()+Math.round(a).toLocaleString("en-IN");}
+function fa(n){if(isNaN(n))n=0;const a=Math.abs(n);return(n<0?"-":"")+sym()+Math.round(a).toLocaleString("en-IN");}
 function ta(tx){return(tx.amount||0)*gr(tx.cur||"BDT");}
 function gc(cat){return CC[cat]||"#7c6fff";}
+
+// ══════════════════════════════════════════════════
+// PERSONAL FINANCE TIME HELPERS
+// ══════════════════════════════════════════════════
 function getDR(period){
   const t=nowD();
   if(period==="today")return{s:t,e:t};
@@ -293,15 +359,117 @@ function getDR(period){
   if(period==="custom"){const s=document.getElementById("rstart")?.value;const e=document.getElementById("rend")?.value;return{s:s||nowM()+"-01",e:e||t};}
   return{s:nowM()+"-01",e:t};
 }
-function filtTx(period){const{s,e}=getDR(period);return S.txs.filter(x=>inRange(x.date||"",s,e));}
+function filtTx(p){const{s,e}=getDR(p);return S.txs.filter(x=>inRange(x.date||"",s,e));}
 function mTxs(){return filtTx("month");}
 function totInc(txs){return(txs||mTxs()).filter(x=>x.type==="income").reduce((a,b)=>a+ta(b),0);}
 function totExp(txs){return(txs||mTxs()).filter(x=>x.type==="expense").reduce((a,b)=>a+ta(b),0);}
 function catSpend(txs){const r={};(txs||mTxs()).filter(x=>x.type==="expense").forEach(x=>{const k=x.custom||x.category;r[k]=(r[k]||0)+ta(x);});return Object.entries(r).sort((a,b)=>b[1]-a[1]);}
 
-function renderAll(){applyTheme();applyLang();renderDash();renderTx();renderReports();renderAlerts();renderBizRoot();}
-function quickRender(){renderDash();renderTx();renderAlerts();}
+// ══════════════════════════════════════════════════
+// GROCERY STORE CALCULATIONS (pure functions)
+// ══════════════════════════════════════════════════
+function gInvValue(biz){
+  return(biz.products||[]).reduce((s,p)=>s+(p.stock||0)*(p.buyPrice||0),0);
+}
+function gTotalRevenue(biz){
+  return(biz.ledger||[]).filter(e=>e.etype==="sale").reduce((s,e)=>s+(e.revenue||0),0);
+}
+function gTotalProductProfit(biz){
+  return(biz.ledger||[]).filter(e=>e.etype==="sale").reduce((s,e)=>s+(e.profit||0),0);
+}
+function gTotalBizCosts(biz){
+  return(biz.ledger||[]).filter(e=>e.etype==="cost").reduce((s,e)=>s+(e.amount||0),0);
+}
+function gNetProfit(biz){return gTotalProductProfit(biz)-gTotalBizCosts(biz);}
+function gTotalPurchaseCost(biz){
+  return(biz.ledger||[]).filter(e=>e.etype==="purchase").reduce((s,e)=>s+(e.totalCost||0),0);
+}
+function gCustDueBalance(cust){
+  let bal=0;
+  (cust.history||[]).forEach(h=>{if(h.type==="due")bal+=h.amount||0;else if(h.type==="payment")bal-=h.amount||0;});
+  return bal;
+}
+function gCompDueBalance(comp){
+  let bal=0;
+  (comp.history||[]).forEach(h=>{if(h.type==="due")bal+=h.amount||0;else if(h.type==="payment")bal-=h.amount||0;});
+  return bal;
+}
+function gTotalCustDue(biz){return(biz.customers||[]).reduce((s,c)=>s+Math.max(0,gCustDueBalance(c)),0);}
+function gTotalCompDue(biz){return(biz.companies||[]).reduce((s,c)=>s+Math.max(0,gCompDueBalance(c)),0);}
+function gAccBalances(biz){
+  const accs={Cash:0,bKash:0,Nagad:0,Bank:0};
+  (biz.ledger||[]).forEach(e=>{
+    const acc=e.account||"Cash";
+    if(!Object.prototype.hasOwnProperty.call(accs,acc))accs[acc]=0;
+    if(e.flow==="in")accs[acc]+=(e.amount||e.revenue||0);
+    else if(e.flow==="out")accs[acc]-=(e.amount||e.totalCost||0);
+  });
+  return accs;
+}
+function gDayLedger(biz,dayKey){
+  return(biz.ledger||[]).filter(e=>bizDay(e.ts||e.date||"")===dayKey);
+}
+function gDaySales(biz,dayKey){
+  return gDayLedger(biz,dayKey).filter(e=>e.etype==="sale").reduce((s,e)=>s+(e.revenue||0),0);
+}
+function gDayPurchase(biz,dayKey){
+  return gDayLedger(biz,dayKey).filter(e=>e.etype==="purchase").reduce((s,e)=>s+(e.totalCost||0),0);
+}
+function gDayProfit(biz,dayKey){
+  const salesProfit=gDayLedger(biz,dayKey).filter(e=>e.etype==="sale").reduce((s,e)=>s+(e.profit||0),0);
+  const costs=gDayLedger(biz,dayKey).filter(e=>e.etype==="cost").reduce((s,e)=>s+(e.amount||0),0);
+  return salesProfit-costs;
+}
+function gPeriodLedger(biz,s,e){
+  return(biz.ledger||[]).filter(entry=>{const d=bizDay(entry.ts||entry.date||"");return d>=s&&d<=e;});
+}
+function gLowStockProducts(biz){
+  return(biz.products||[]).filter(p=>(p.stock||0)<=(p.minStock||0));
+}
 
+// Shortlist: auto items from low stock + manual items
+function getShortlist(biz){
+  const sl=biz.shortlist||[];
+  const low=gLowStockProducts(biz);
+  const autoIds=new Set(sl.filter(x=>x.source==="auto").map(x=>x.productId));
+  const result=[...sl]; // start with existing
+  // Add auto items for newly low stock
+  low.forEach(p=>{
+    if(!autoIds.has(p.id)){
+      result.push({id:uid(),productId:p.id,name:p.name,source:"auto"});
+    }
+  });
+  // Remove auto items where stock is now OK
+  const lowIds=new Set(low.map(p=>p.id));
+  return result.filter(x=>x.source==="manual"||(x.source==="auto"&&lowIds.has(x.productId)));
+}
+
+// ══════════════════════════════════════════════════
+// LEDGER ENTRY BUILDER
+// ══════════════════════════════════════════════════
+function mkLedgerEntry(etype,data){
+  return{id:uid(),ts:nowTs(),etype,...data};
+}
+
+// ══════════════════════════════════════════════════
+// RENDER ALL
+// ══════════════════════════════════════════════════
+function renderAll(){applyTheme();applyLang();renderDash();renderTx();renderReports();renderAlerts();if(document.getElementById("page-business").classList.contains("active"))renderBizRoot();}
+function quickRender(){renderDash();renderTx();renderAlerts();}
+function refreshGrocery(biz){
+  // Sync shortlist
+  if(biz)biz.shortlist=getShortlist(biz);
+  saveS();
+  renderDash();
+  renderAlerts();
+  if(document.getElementById("page-business").classList.contains("active")){
+    renderBizApp(document.getElementById("biz-root"),biz||activeBiz());
+  }
+}
+
+// ══════════════════════════════════════════════════
+// THEME & LANG
+// ══════════════════════════════════════════════════
 function applyTheme(){
   document.body.className=S.theme==="light"?"light":"";
   const btn=document.getElementById("tbtn");if(btn)btn.textContent=S.theme==="dark"?"☀":"🌙";
@@ -333,11 +501,14 @@ function applyLang(){
 }
 function setLang(l){S.lang=l;saveS();renderAll();}
 
+// ══════════════════════════════════════════════════
+// DASHBOARD
+// ══════════════════════════════════════════════════
 function renderDash(){
   const mt=mTxs();
   const ti=totInc(mt),te=totExp(mt),bal=ti-te;
   const biz=activeBiz();
-  const bizNet=biz?bizNetProfit(biz):0;
+  const bizNet=biz&&biz.type==="Grocery Store"?gNetProfit(biz):0;
   document.getElementById("hbal").textContent=fa(bal);
   document.getElementById("hbal").style.color=bal>=0?"var(--gr)":"var(--rd)";
   document.getElementById("hinc").textContent=fa(ti);
@@ -349,6 +520,9 @@ function renderDash(){
   document.getElementById("dtxl").innerHTML=rec.length===0?`<div class="empty"><div class="ei">💸</div>No transactions yet</div>`:rec.map(tx=>`<div class="txc" onclick="openEdit(${tx.id})"><div style="display:flex;gap:9px;align-items:center"><div class="txi" style="background:${gc(tx.custom||tx.category)}1a">${tx.type==="income"?"💚":"💸"}</div><div><div style="font-size:12px;font-weight:600">${esc(tx.custom||tx.category)}</div><div style="font-size:10px;color:var(--mu)">${tx.date}</div></div></div><span style="font-weight:700;font-size:13px;color:${tx.type==="income"?"var(--gr)":"var(--rd)"}">${tx.type==="income"?"+":"-"}${fa(ta(tx))}</span></div>`).join("");
 }
 
+// ══════════════════════════════════════════════════
+// TRANSACTIONS
+// ══════════════════════════════════════════════════
 function renderTx(){
   const q=(document.getElementById("txs")?.value||"").toLowerCase();
   const ft=S.filterType||"all";
@@ -359,28 +533,26 @@ function renderTx(){
     const md=!fm||x.date.startsWith(fm);
     return ms&&mt2&&md;
   }).sort((a,b)=>b.date.localeCompare(a.date));
-  const el=document.getElementById("txl");
-  if(!el)return;
+  const el=document.getElementById("txl");if(!el)return;
   if(list.length===0){el.innerHTML=`<div class="empty"><div class="ei">🔍</div>No transactions found</div>`;return;}
   let ld="";
-  el.innerHTML=list.map(tx=>{let h="";if(tx.date!==ld){ld=tx.date;h=`<div class="dtag">${tx.date}</div>`;}return h+`<div class="txc" onclick="openEdit(${tx.id})"><div style="display:flex;gap:9px;align-items:center"><div class="txi" style="background:${gc(tx.custom||tx.category)}1a">${tx.type==="income"?"💚":"💸"}</div><div><div style="font-size:12px;font-weight:600">${esc(tx.custom||tx.category)}</div><div style="font-size:10px;color:var(--mu)">${tx.note||""}${tx.cur&&tx.cur!=="BDT"?` <span style="background:var(--bld);color:var(--bl);border-radius:4px;padding:1px 4px">${tx.cur}</span>`:""}</div></div></div><div style="display:flex;align-items:center;gap:6px"><span style="font-weight:700;font-size:13px;color:${tx.type==="income"?"var(--gr)":"var(--rd)"}">${tx.type==="income"?"+":"-"}${fa(ta(tx))}</span><button onclick="event.stopPropagation();delTx(${tx.id})" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px">✕</button></div></div>`;}).join("");
+  el.innerHTML=list.map(tx=>{let h="";if(tx.date!==ld){ld=tx.date;h=`<div class="dtag">${tx.date}</div>`;}return h+`<div class="txc" onclick="openEdit(${tx.id})"><div style="display:flex;gap:9px;align-items:center"><div class="txi" style="background:${gc(tx.custom||tx.category)}1a">${tx.type==="income"?"💚":"💸"}</div><div><div style="font-size:12px;font-weight:600">${esc(tx.custom||tx.category)}</div><div style="font-size:10px;color:var(--mu)">${tx.note||""}</div></div></div><div style="display:flex;align-items:center;gap:6px"><span style="font-weight:700;font-size:13px;color:${tx.type==="income"?"var(--gr)":"var(--rd)"}">${tx.type==="income"?"+":"-"}${fa(ta(tx))}</span><button onclick="event.stopPropagation();delTx(${tx.id})" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px">✕</button></div></div>`;}).join("");
 }
 function sf(v,btn){S.filterType=v;document.querySelectorAll("#page-transactions .pill").forEach(b=>b.className="pill");btn.className="pill ap";renderTx();}
 
+// ══════════════════════════════════════════════════
+// ALERTS
+// ══════════════════════════════════════════════════
 function renderAlerts(){
   const ab=document.getElementById("abr");
   const mt=mTxs();
   const ex=Object.entries(S.budgets).filter(([cat,lim])=>mt.filter(x=>x.type==="expense"&&x.category===cat).reduce((a,b)=>a+ta(b),0)>lim);
-  const biz=activeBiz();
-  let bizAlerts=[];
-  if(biz&&biz.type==="Grocery Store"){
-    const lowItems=(biz.inventory||[]).filter(p=>p.stock<=p.minStock);
-    if(lowItems.length>0)bizAlerts.push(`⚠️ Low stock: ${lowItems.map(p=>p.name).join(", ")}`);
-  }
-  const alerts=[...ex.map(([c])=>`Budget exceeded: ${c}`),...bizAlerts];
-  ab.innerHTML=alerts.map(a=>`<div class="al">${a}</div>`).join("");
+  ab.innerHTML=ex.map(([c])=>`<div class="al">⚠️ Budget exceeded: ${c}</div>`).join("");
 }
 
+// ══════════════════════════════════════════════════
+// REPORTS (Personal Finance)
+// ══════════════════════════════════════════════════
 function renderReports(){
   const period=S.rperiod||"month";
   const{s,e}=getDR(period);
@@ -390,7 +562,9 @@ function renderReports(){
   document.getElementById("reppl").textContent=(lbl[period]||"Period")+" Summary";
   const mx=Math.max(ti,te,1);
   document.getElementById("repbars").innerHTML=[{l:"Income",v:ti,c:"var(--gr)"},{l:"Expense",v:te,c:"var(--rd)"}].map(({l,v,c})=>{const h=Math.max(8,Math.round((v/mx)*100));return`<div class="bcol"><span style="font-size:10px;font-weight:600;color:${c}">${fa(v)}</span><div class="brect" style="width:50px;height:${h}%;background:${c};opacity:.85"></div><span style="font-size:10px;color:var(--mu)">${l}</span></div>`;}).join("");
-  document.getElementById("repstats").innerHTML=[{l:"Income",v:ti,c:"var(--gr)"},{l:"Expense",v:te,c:"var(--rd)"},{l:"Balance",v:bal,c:bal>=0?"var(--gr)":"var(--rd)"},{l:"Biz Profit",v:activeBiz()?bizNetProfit(activeBiz()):0,c:"var(--pu)"}].map(({l,v,c})=>`<div style="background:var(--c2);border:.5px solid var(--bd);border-radius:var(--rs);padding:11px"><div style="font-size:10px;color:var(--mu);margin-bottom:2px">${l}</div><div style="font-size:14px;font-weight:700;color:${c}">${fa(v)}</div></div>`).join("");
+  const biz=activeBiz();
+  const bizNet=biz&&biz.type==="Grocery Store"?gNetProfit(biz):0;
+  document.getElementById("repstats").innerHTML=[{l:"Income",v:ti,c:"var(--gr)"},{l:"Expense",v:te,c:"var(--rd)"},{l:"Balance",v:bal,c:bal>=0?"var(--gr)":"var(--rd)"},{l:"Biz Profit",v:bizNet,c:"var(--pu)"}].map(({l,v,c})=>`<div style="background:var(--c2);border:.5px solid var(--bd);border-radius:var(--rs);padding:11px"><div style="font-size:10px;color:var(--mu);margin-bottom:2px">${l}</div><div style="font-size:14px;font-weight:700;color:${c}">${fa(v)}</div></div>`).join("");
   const cs=catSpend(txs),te2=te||1;
   document.getElementById("repcats").innerHTML=cs.length===0?`<div class="empty">No expense data</div>`:cs.map(([cat,amt])=>`<div class="row" style="padding:6px 0;border-bottom:.5px solid var(--bd)"><div style="display:flex;gap:7px;align-items:center"><div style="width:8px;height:8px;border-radius:50%;background:${gc(cat)};flex-shrink:0"></div><span style="font-size:11px;font-weight:500">${esc(cat)}</span></div><div><span style="font-size:11px;font-weight:600;color:var(--rd)">${fa(amt)}</span><span style="font-size:10px;color:var(--mu);margin-left:4px">${Math.round((amt/te2)*100)}%</span></div></div>`).join("");
   const months=new Set(S.txs.map(x=>x.date.slice(0,7)));const mc=months.size||1;
@@ -398,13 +572,13 @@ function renderReports(){
   const topCat=cs[0]?cs[0][0]:"—";
   const incByCat={};S.txs.filter(x=>x.type==="income").forEach(x=>{const k=x.custom||x.category;incByCat[k]=(incByCat[k]||0)+ta(x);});
   const topSrc=Object.entries(incByCat).sort((a,b)=>b[1]-a[1])[0];
-  document.getElementById("insights").innerHTML=`<div style="background:var(--c2);border-radius:var(--rs);padding:11px">${[["🔴 Top Spending",topCat+(cs[0]?` (${fa(cs[0][1])})` :"")],["💚 Top Income",topSrc?`${topSrc[0]} (${fa(topSrc[1])})` :"—"],["📊 Avg Monthly Income",fa(avgI)],["📊 Avg Monthly Expense",fa(avgE)],["💡 Savings Rate",ti>0?Math.max(0,Math.round(((ti-te)/ti)*100))+"%":"—"]].map(([l,v])=>`<div class="row" style="padding:5px 0;border-bottom:.5px solid var(--bd)"><span style="font-size:11px;color:var(--mu)">${l}</span><span style="font-size:11px;font-weight:600">${v}</span></div>`).join("")}</div>`;
+  document.getElementById("insights").innerHTML=`<div style="background:var(--c2);border-radius:var(--rs);padding:11px">${[["🔴 Top Spending",topCat+(cs[0]?` (${fa(cs[0][1])})`:"")],["💚 Top Income",topSrc?`${topSrc[0]} (${fa(topSrc[1])})` :"—"],["📊 Avg Monthly Income",fa(avgI)],["📊 Avg Monthly Expense",fa(avgE)],["💡 Savings Rate",ti>0?Math.max(0,Math.round(((ti-te)/ti)*100))+"%":"—"]].map(([l,v])=>`<div class="row" style="padding:5px 0;border-bottom:.5px solid var(--bd)"><span style="font-size:11px;color:var(--mu)">${l}</span><span style="font-size:11px;font-weight:600">${v}</span></div>`).join("")}</div>`;
 }
 function setRP(p,btn){S.rperiod=p;document.querySelectorAll("#rpills .pill").forEach(b=>b.className="pill");btn.className="pill ab";const cr=document.getElementById("crange");if(cr)cr.style.display=p==="custom"?"block":"none";renderReports();}
 
-// ══════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 // PERSONAL TX MODAL
-// ══════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 function openModal(){
   S.editId=null;
   document.getElementById("mtitle").textContent="Add Transaction";
@@ -451,8 +625,7 @@ function chkO(){const v=document.getElementById("mcat").value;document.getElemen
 function togRec(){S.recurForm=!S.recurForm;const tr=document.getElementById("trec"),trt=document.getElementById("trect");tr.style.background=S.recurForm?"var(--gr)":"var(--bd)";trt.style.left=S.recurForm?"22px":"3px";}
 function convShow(){const cur=document.getElementById("mcur").value;const amt=Number(document.getElementById("mamt").value||0);const mc=document.getElementById("mconv");if(cur!==S.currency&&amt>0){mc.style.display="block";mc.textContent=`≈ ${fa(amt*gr(cur))} in ${S.currency}`;}else mc.style.display="none";}
 function saveTx(){
-  const amt=Number(document.getElementById("mamt").value);
-  if(!amt||isNaN(amt))return;
+  const amt=Number(document.getElementById("mamt").value);if(!amt||isNaN(amt))return;
   const cat=document.getElementById("mcat").value;
   const isO=cat==="Others"||cat==="অন্যান্য";
   const d={type:S.txType,category:cat,amount:amt,note:document.getElementById("mnote").value,date:document.getElementById("mdate").value||nowD(),recurring:S.recurForm,custom:isO?document.getElementById("ocv").value:"",cur:document.getElementById("mcur").value};
@@ -463,38 +636,13 @@ function saveTx(){
 function delTx(id){if(confirm("Delete this transaction?")){S.txs=S.txs.filter(x=>x.id!==id);saveS();quickRender();}}
 function closeModal(id){document.getElementById(id).classList.remove("open");}
 
-// ══════════════════════════════════════════════════════════
-// BUSINESS MODULE V2
-// ══════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// BUSINESS MODULE — LIST
+// ══════════════════════════════════════════════════
 function activeBiz(){return S.businesses.find(b=>b.id===S.activeBizId)||null;}
 function getBiz(id){return S.businesses.find(b=>b.id===id)||null;}
-function bizAccounts(biz){
-  // Compute live account balances from transactions
-  const accs={Cash:0,bKash:0,Nagad:0,Bank:0};
-  (biz.ledger||[]).forEach(tx=>{
-    const acc=tx.account||"Cash";
-    if(!accs.hasOwnProperty(acc))accs[acc]=0;
-    if(tx.flow==="in")accs[acc]+=tx.amount||0;
-    else accs[acc]-=tx.amount||0;
-  });
-  return accs;
-}
-function bizNetProfit(biz){
-  const rev=(biz.ledger||[]).filter(tx=>tx.flow==="in").reduce((a,b)=>a+(b.amount||0),0);
-  const exp=(biz.ledger||[]).filter(tx=>tx.flow==="out").reduce((a,b)=>a+(b.amount||0),0);
-  return rev-exp;
-}
-function bizMonthData(biz,mon){
-  const txs=(biz.ledger||[]).filter(tx=>(tx.date||"").startsWith(mon));
-  const rev=txs.filter(tx=>tx.flow==="in").reduce((a,b)=>a+(b.amount||0),0);
-  const exp=txs.filter(tx=>tx.flow==="out").reduce((a,b)=>a+(b.amount||0),0);
-  return{rev,exp,profit:rev-exp};
-}
 
-// ── BIZ ROOT RENDERER ───────────────────────────────────
-let bizTab="dashboard";
 function renderBizRoot(){
-  if(!document.getElementById("page-business").classList.contains("active"))return;
   const root=document.getElementById("biz-root");
   const biz=activeBiz();
   if(!biz){renderBizList(root);return;}
@@ -504,491 +652,892 @@ function renderBizRoot(){
 function renderBizList(root){
   root.innerHTML=`
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-      <div style="font-size:16px;font-weight:700">My Businesses</div>
-      <button class="btn btp" style="width:auto;padding:8px 14px;font-size:12px" onclick="openBizCreate()">+ New</button>
+      <div style="font-size:16px;font-weight:700">${gl("myBiz")}</div>
+      <button class="btn btp" style="width:auto;padding:8px 14px;font-size:12px" onclick="openBizCreate()">${gl("newBiz")}</button>
     </div>
-    ${S.businesses.length===0?`<div class="empty"><div class="ei">🏢</div>No businesses yet<br><span style="font-size:11px">Tap + New to create one</span></div>`
+    ${S.businesses.length===0?`<div class="empty"><div class="ei">🏢</div>${S.lang==="bn"?"এখনো কোনো ব্যবসা নেই":"No businesses yet"}<br><span style="font-size:11px">${S.lang==="bn"?"+ নতুন ট্যাপ করুন":"Tap + New to create one"}</span></div>`
     :S.businesses.map(biz=>`
       <div class="biz-card" onclick="selectBiz('${biz.id}')">
         <div class="row">
           <div style="display:flex;gap:10px;align-items:center">
-            <div style="font-size:28px">${BIZ_ICONS[biz.type]||"🏢"}</div>
-            <div>
-              <div style="font-size:14px;font-weight:700">${esc(biz.name)}</div>
-              <div class="biz-type-badge" style="margin-top:3px">${biz.type}</div>
-            </div>
+            <div style="font-size:26px">${BIZ_ICONS[biz.type]||"🏢"}</div>
+            <div><div style="font-size:14px;font-weight:700">${esc(biz.name)}</div><div class="biz-type-badge" style="margin-top:3px">${esc(biz.type)}</div></div>
           </div>
           <div style="text-align:right">
-            <div style="font-size:13px;font-weight:700;color:${bizNetProfit(biz)>=0?"var(--gr)":"var(--rd)"}">${fa(bizNetProfit(biz))}</div>
-            <div style="font-size:10px;color:var(--mu)">Net Profit</div>
+            <div style="font-size:13px;font-weight:700;color:${biz.type==="Grocery Store"?gNetProfit(biz)>=0?"var(--gr)":"var(--rd)":"var(--pu)"}">${biz.type==="Grocery Store"?fa(gNetProfit(biz)):""}</div>
+            <div style="font-size:10px;color:var(--mu)">${biz.type==="Grocery Store"?gl("netProfit"):""}</div>
           </div>
         </div>
         <div style="display:flex;gap:8px;margin-top:10px">
-          <button onclick="event.stopPropagation();openBizEdit('${biz.id}')" style="flex:1;background:var(--inp);border:.5px solid var(--bd);border-radius:8px;padding:6px;cursor:pointer;color:var(--mu);font-size:12px;font-family:inherit">Edit</button>
-          <button onclick="event.stopPropagation();deleteBiz('${biz.id}')" style="flex:1;background:var(--rdd);border:.5px solid rgba(255,77,109,.25);border-radius:8px;padding:6px;cursor:pointer;color:var(--rd);font-size:12px;font-family:inherit">Delete</button>
+          <button onclick="event.stopPropagation();openBizEdit('${biz.id}')" style="flex:1;background:var(--inp);border:.5px solid var(--bd);border-radius:8px;padding:6px;cursor:pointer;color:var(--mu);font-size:12px;font-family:inherit">${gl("edit")}</button>
+          <button onclick="event.stopPropagation();deleteBiz('${biz.id}')" style="flex:1;background:var(--rdd);border:.5px solid rgba(255,77,109,.25);border-radius:8px;padding:6px;cursor:pointer;color:var(--rd);font-size:12px;font-family:inherit">${gl("delete")}</button>
         </div>
-      </div>`).join("")}
-  `;
+      </div>`).join("")}`;
 }
 
-function selectBiz(id){S.activeBizId=id;bizTab="dashboard";saveS();renderBizRoot();renderDash();}
+function selectBiz(id){S.activeBizId=id;setBizTab(id,"dashboard");saveS();renderBizRoot();renderDash();}
 function goBackToList(){S.activeBizId=null;saveS();renderBizRoot();renderDash();}
 
+// ══════════════════════════════════════════════════
+// BUSINESS APP SHELL
+// ══════════════════════════════════════════════════
 function renderBizApp(root,biz){
-  const tabs=getBizTabs(biz.type);
+  if(!biz)return;
+  const tabs=getBizTabs(biz);
+  const curTab=getBizTab(biz.id);
   root.innerHTML=`
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
       <div style="display:flex;gap:8px;align-items:center">
-        <button onclick="goBackToList()" style="background:var(--inp);border:.5px solid var(--bd);border-radius:8px;padding:5px 10px;cursor:pointer;color:var(--mu);font-size:12px;font-family:inherit">‹ Back</button>
-        <div>
-          <div style="font-size:14px;font-weight:700">${esc(biz.name)}</div>
-          <div style="font-size:10px;color:var(--mu)">${biz.type}</div>
-        </div>
+        <button onclick="goBackToList()" style="background:var(--inp);border:.5px solid var(--bd);border-radius:8px;padding:5px 10px;cursor:pointer;color:var(--mu);font-size:12px;font-family:inherit">${gl("backToList")}</button>
+        <div><div style="font-size:14px;font-weight:700">${esc(biz.name)}</div><div style="font-size:10px;color:var(--mu)">${esc(biz.type)}</div></div>
       </div>
     </div>
-    <div class="tab-bar" id="biz-tabs">${tabs.map(t=>`<button class="tab-btn${bizTab===t.id?" active":""}" onclick="setBizTab('${t.id}')">${t.label}</button>`).join("")}</div>
-    <div id="biz-tab-content"></div>
-  `;
-  renderBizTab(biz);
+    <div class="tab-bar">${tabs.map(t=>`<button class="tab-btn${curTab===t.id?" active":""}" onclick="switchBizTab('${biz.id}','${t.id}')">${t.label}</button>`).join("")}</div>
+    <div id="biz-tab-content"></div>`;
+  renderBizTabContent(biz,curTab);
 }
 
-function getBizTabs(type){
-  const common=[{id:"dashboard",label:"Dashboard"},{id:"ledger",label:"Ledger"},{id:"reports",label:"Reports"}];
-  if(type==="Freelancer")return[...common,{id:"clients",label:"Clients"},{id:"projects",label:"Projects"}];
-  if(type==="Grocery Store")return[...common,{id:"inventory",label:"Inventory"},{id:"dues",label:"Dues"}];
-  return common;
+function getBizTabs(biz){
+  if(biz.type==="Grocery Store")return[
+    {id:"dashboard",label:gl("dashboard")},
+    {id:"inventory",label:gl("inventory")},
+    {id:"ledger",label:gl("ledger")},
+    {id:"dues",label:gl("dues")},
+    {id:"shortlist",label:gl("shortlist")},
+    {id:"costs",label:gl("costs")},
+    {id:"reports",label:gl("reports")},
+  ];
+  if(biz.type==="Freelancer")return[{id:"dashboard",label:gl("dashboard")},{id:"ledger",label:gl("ledger")},{id:"clients",label:gl("clients")},{id:"projects",label:gl("projects")},{id:"reports",label:gl("reports")}];
+  return[{id:"dashboard",label:gl("dashboard")},{id:"ledger",label:gl("ledger")},{id:"reports",label:gl("reports")}];
 }
-function setBizTab(t){bizTab=t;const biz=activeBiz();if(biz)renderBizTab(biz);}
 
-function renderBizTab(biz){
+function switchBizTab(bizId,tab){
+  setBizTab(bizId,tab);
+  const biz=getBiz(bizId);if(!biz)return;
+  // Update tab bar active state without full re-render
+  document.querySelectorAll("#biz-root .tab-btn").forEach(b=>{
+    const tabs=getBizTabs(biz);
+    const t=tabs.find(t=>t.label===b.textContent);
+    b.className="tab-btn"+(t&&t.id===tab?" active":"");
+  });
+  renderBizTabContent(biz,tab);
+}
+
+function renderBizTabContent(biz,tab){
   const content=document.getElementById("biz-tab-content");
   if(!content)return;
-  if(bizTab==="dashboard")content.innerHTML=renderBizDashboard(biz);
-  else if(bizTab==="ledger")content.innerHTML=renderBizLedger(biz);
-  else if(bizTab==="reports")content.innerHTML=renderBizReports(biz);
-  else if(bizTab==="clients")content.innerHTML=renderClients(biz);
-  else if(bizTab==="projects")content.innerHTML=renderProjects(biz);
-  else if(bizTab==="inventory")content.innerHTML=renderInventory(biz);
-  else if(bizTab==="dues")content.innerHTML=renderDues(biz);
-  // Update tab bar active state
-  document.querySelectorAll("#biz-tabs .tab-btn").forEach(b=>{b.className="tab-btn"+(b.textContent===getBizTabs(biz.type).find(t=>t.id===bizTab)?.label?" active":"");});
+  if(biz.type==="Grocery Store"){
+    if(tab==="dashboard")content.innerHTML=renderGrocDash(biz);
+    else if(tab==="inventory")content.innerHTML=renderGrocInventory(biz);
+    else if(tab==="ledger")content.innerHTML=renderGrocLedger(biz);
+    else if(tab==="dues")content.innerHTML=renderGrocDues(biz);
+    else if(tab==="shortlist")content.innerHTML=renderGrocShortlist(biz);
+    else if(tab==="costs")content.innerHTML=renderGrocCosts(biz);
+    else if(tab==="reports")content.innerHTML=renderGrocReports(biz);
+  }else{
+    if(tab==="dashboard")content.innerHTML=renderGenBizDash(biz);
+    else if(tab==="ledger")content.innerHTML=renderGenLedger(biz);
+    else if(tab==="clients")content.innerHTML=renderClients(biz);
+    else if(tab==="projects")content.innerHTML=renderProjects(biz);
+    else if(tab==="reports")content.innerHTML=renderGenReports(biz);
+  }
 }
 
-function renderBizDashboard(biz){
-  const accs=bizAccounts(biz);
-  const mon=bizMonthData(biz,nowM());
-  const net=bizNetProfit(biz);
-  const allRev=(biz.ledger||[]).filter(tx=>tx.flow==="in").reduce((a,b)=>a+(b.amount||0),0);
-  const allExp=(biz.ledger||[]).filter(tx=>tx.flow==="out").reduce((a,b)=>a+(b.amount||0),0);
-  let extra="";
-  if(biz.type==="Freelancer"){
-    const projs=biz.projects||[];
-    const pending=projs.filter(p=>p.payStatus==="Unpaid").reduce((a,b)=>a+(b.value||0),0);
-    const received=projs.filter(p=>p.payStatus==="Paid").reduce((a,b)=>a+(b.value||0),0);
-    extra=`<div class="c"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <div style="background:var(--rdd);border:.5px solid rgba(255,77,109,.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Pending Payments</div><div style="font-size:15px;font-weight:700;color:var(--rd)">${fa(pending)}</div></div>
-      <div style="background:var(--gd);border:.5px solid rgba(0,200,122,.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Received</div><div style="font-size:15px;font-weight:700;color:var(--gr)">${fa(received)}</div></div>
-      <div style="background:var(--pud);border:.5px solid rgba(124,111,255,.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Total Projects</div><div style="font-size:15px;font-weight:700;color:var(--pu)">${projs.length}</div></div>
-      <div style="background:var(--bld);border:.5px solid rgba(61,139,255,.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Active</div><div style="font-size:15px;font-weight:700;color:var(--bl)">${projs.filter(p=>p.status==="In Progress").length}</div></div>
-    </div></div>`;
-  }
-  if(biz.type==="Grocery Store"){
-    const inv=biz.inventory||[];
-    const invVal=inv.reduce((a,p)=>a+(p.stock||0)*(p.buyPrice||0),0);
-    const lowCount=inv.filter(p=>p.stock<=p.minStock).length;
-    const custDue=(biz.custDues||[]).reduce((a,b)=>a+(b.remaining||0),0);
-    const suppDue=(biz.suppDues||[]).reduce((a,b)=>a+(b.remaining||0),0);
-    extra=`<div class="c"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <div style="background:var(--pud);border:.5px solid rgba(124,111,255,.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Inventory Value</div><div style="font-size:15px;font-weight:700;color:var(--pu)">${fa(invVal)}</div></div>
-      <div style="background:${lowCount>0?"var(--rdd)":"var(--gd)"};border:.5px solid rgba(${lowCount>0?"255,77,109":"0,200,122"},.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Low Stock Items</div><div style="font-size:15px;font-weight:700;color:${lowCount>0?"var(--rd)":"var(--gr)"}">${lowCount}</div></div>
-      <div style="background:var(--bld);border:.5px solid rgba(61,139,255,.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Customer Due</div><div style="font-size:15px;font-weight:700;color:var(--bl)">${fa(custDue)}</div></div>
-      <div style="background:var(--rdd);border:.5px solid rgba(255,77,109,.2);border-radius:var(--rs);padding:10px"><div style="font-size:10px;color:var(--mu)">Supplier Due</div><div style="font-size:15px;font-weight:700;color:var(--rd)">${fa(suppDue)}</div></div>
-    </div></div>`;
-  }
+// ══════════════════════════════════════════════════
+// GROCERY DASHBOARD
+// ══════════════════════════════════════════════════
+function renderGrocDash(biz){
+  const today=bizDayToday(),yest=bizDayYesterday();
+  const todSales=gDaySales(biz,today),todPur=gDayPurchase(biz,today),todProfit=gDayProfit(biz,today);
+  const yestSales=gDaySales(biz,yest),yestPur=gDayPurchase(biz,yest);
+  const invVal=gInvValue(biz);
+  const custDue=gTotalCustDue(biz);
+  const compDue=gTotalCompDue(biz);
+  const net=gNetProfit(biz);
+  const totalRev=gTotalRevenue(biz);
+  const totalExp=gTotalPurchaseCost(biz)+gTotalBizCosts(biz);
+  const accs=gAccBalances(biz);
+  const lowItems=gLowStockProducts(biz);
   return`
-    <div class="hero" style="padding:15px">
+    ${lowItems.length>0?`<div class="low-stock-bar"><div class="row" style="margin-bottom:6px"><div style="font-size:12px;font-weight:600;color:var(--am)">${gl("lowStockAlert")}</div><button onclick="dismissLowStock('${biz.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:16px;line-height:1">×</button></div>${lowItems.map(p=>`<div style="font-size:11px;color:var(--am);padding:2px 0">${esc(p.name)}: ${p.stock} ${S.lang==="bn"?"বাকি":"left"} (min ${p.minStock})</div>`).join("")}</div>`:""}
+    <div class="hero" style="padding:14px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div><div class="hilbl">Total Revenue</div><div style="font-size:17px;font-weight:700;color:var(--gr)">${fa(allRev)}</div></div>
-        <div><div class="hilbl">Net Profit</div><div style="font-size:17px;font-weight:700;color:${net>=0?"var(--pu)":"var(--rd)"}">${fa(net)}</div></div>
-        <div><div class="hilbl">Total Expenses</div><div style="font-size:17px;font-weight:700;color:var(--rd)">${fa(allExp)}</div></div>
-        <div><div class="hilbl">This Month Profit</div><div style="font-size:17px;font-weight:700;color:var(--am)">${fa(mon.profit)}</div></div>
+        <div><div class="hilbl">${gl("todaySales")}</div><div style="font-size:17px;font-weight:700;color:var(--gr)">${fa(todSales)}</div></div>
+        <div><div class="hilbl">${gl("todayPurchase")}</div><div style="font-size:17px;font-weight:700;color:var(--rd)">${fa(todPur)}</div></div>
+        <div><div class="hilbl">${gl("todayProfit")}</div><div style="font-size:17px;font-weight:700;color:${todProfit>=0?"var(--pu)":"var(--rd)"}">${fa(todProfit)}</div></div>
+        <div><div class="hilbl">${gl("yestSales")}</div><div style="font-size:17px;font-weight:700;color:var(--am)">${fa(yestSales)}</div></div>
       </div>
+    </div>
+    <div class="info-grid">
+      <div class="info-box"><div class="info-lbl">${gl("totalRevenue")}</div><div class="info-val" style="color:var(--gr)">${fa(totalRev)}</div></div>
+      <div class="info-box"><div class="info-lbl">${gl("netProfit")}</div><div class="info-val" style="color:${net>=0?"var(--pu)":"var(--rd)"}">${fa(net)}</div></div>
+      <div class="info-box"><div class="info-lbl">${gl("invValue")}</div><div class="info-val" style="color:var(--bl)">${fa(invVal)}</div></div>
+      <div class="info-box"><div class="info-lbl">${gl("custDue")}</div><div class="info-val" style="color:var(--am)">${fa(custDue)}</div></div>
+      <div class="info-box"><div class="info-lbl">${gl("compDue")}</div><div class="info-val" style="color:var(--rd)">${fa(compDue)}</div></div>
+      <div class="info-box"><div class="info-lbl">${gl("yestPurchase")}</div><div class="info-val" style="color:var(--mu)">${fa(yestPur)}</div></div>
     </div>
     <div class="acc-grid">
-      ${ACCS.map(acc=>`<div class="acc-card"><div class="acc-lbl">${acc}</div><div class="acc-val" style="color:${accs[acc]>=0?"var(--gr)":"var(--rd)"}">${fa(accs[acc])}</div></div>`).join("")}
+      <div class="acc-card"><div class="acc-lbl">Cash</div><div class="acc-val" style="color:${accs.Cash>=0?"var(--gr)":"var(--rd)"}">${fa(accs.Cash)}</div></div>
+      <div class="acc-card"><div class="acc-lbl">bKash</div><div class="acc-val" style="color:${accs.bKash>=0?"var(--gr)":"var(--rd)"}">${fa(accs.bKash)}</div></div>
+      <div class="acc-card"><div class="acc-lbl">Nagad</div><div class="acc-val" style="color:${accs.Nagad>=0?"var(--gr)":"var(--rd)"}">${fa(accs.Nagad)}</div></div>
+      <div class="acc-card"><div class="acc-lbl">Bank</div><div class="acc-val" style="color:${accs.Bank>=0?"var(--gr)":"var(--rd)"}">${fa(accs.Bank)}</div></div>
     </div>
-    ${extra}
     <div class="c">
-      <div class="row" style="margin-bottom:9px"><div class="stit">Add Transaction</div></div>
+      <div class="stit">${S.lang==="bn"?"দ্রুত অ্যাকশন":"Quick Actions"}</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">
-        <button class="btn btg" style="font-size:12px" onclick="openBizTx('in')">+ Income / Sale</button>
-        <button class="btn btr" style="font-size:12px" onclick="openBizTx('out')">- Expense / Cost</button>
+        <button class="btn btg" style="font-size:12px" onclick="openGrocModal('sale')">${gl("recordSale")}</button>
+        <button class="btn btr" style="font-size:12px" onclick="openGrocModal('purchase')">${gl("recordPurchase")}</button>
+        <button class="btn btp" style="font-size:12px" onclick="openGrocModal('addProduct')">${gl("addProduct")}</button>
+        <button class="btn bta" style="font-size:12px" onclick="openGrocModal('cost')">${gl("addCost")}</button>
       </div>
-    </div>
-  `;
+    </div>`;
+}
+function dismissLowStock(bizId){
+  const biz=getBiz(bizId);if(!biz)return;
+  // Mark as dismissed until stock changes again — we just re-sync shortlist
+  // Hide the alert bar visually by re-rendering without the alert (user tapped ×)
+  // We store dismissed in a transient way — alert reappears if stock changes
+  if(!S.dismissedLowStock)S.dismissedLowStock={};
+  const low=gLowStockProducts(biz);
+  S.dismissedLowStock[bizId]=(S.dismissedLowStock[bizId]||[]).concat(low.map(p=>p.id));
+  saveS();
+  const content=document.getElementById("biz-tab-content");
+  if(content)content.innerHTML=renderGrocDash(biz);
 }
 
-function renderBizLedger(biz){
-  const txs=(biz.ledger||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
+// ══════════════════════════════════════════════════
+// GROCERY INVENTORY
+// ══════════════════════════════════════════════════
+function renderGrocInventory(biz){
+  const inv=biz.products||[];
+  const low=gLowStockProducts(biz);
+  const invVal=gInvValue(biz);
+  return`
+    ${low.length>0?`<div class="low-stock-bar"><div class="row" style="margin-bottom:5px"><div style="font-size:12px;font-weight:600;color:var(--am)">${gl("lowStockAlert")}</div><button onclick="dismissLowStock('${biz.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:16px">×</button></div>${low.map(p=>`<div style="font-size:11px;color:var(--am)">${esc(p.name)} — Qty: ${p.stock}</div>`).join("")}</div>`:""}
+    <div class="c">
+      <div class="row" style="margin-bottom:9px">
+        <div><div class="stit" style="margin-bottom:2px">${gl("inventory")}</div><div style="font-size:10px;color:var(--mu)">${S.lang==="bn"?"মোট মূল্য":"Total Value"}: ${fa(invVal)}</div></div>
+        <button onclick="openGrocModal('addProduct')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:5px 11px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">${gl("addProduct")}</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px">
+        <button class="btn btg" style="font-size:12px" onclick="openGrocModal('sale')">${gl("recordSale")}</button>
+        <button class="btn btr" style="font-size:12px" onclick="openGrocModal('purchase')">${gl("recordPurchase")}</button>
+      </div>
+      ${inv.length===0?`<div class="empty"><div class="ei">📦</div>${gl("noProducts")}</div>`
+      :inv.map(p=>{
+        const isLow=(p.stock||0)<=(p.minStock||0);
+        const margin=(p.sellPrice||0)-(p.buyPrice||0);
+        return`<div class="txc" style="cursor:default;border-left:3px solid ${isLow?"var(--am)":"var(--bd)"}">
+          <div style="flex:1">
+            <div class="row"><div style="font-size:12px;font-weight:600">${esc(p.name)}</div><span style="font-size:12px;font-weight:700;color:${isLow?"var(--am)":"var(--gr)"}">${S.lang==="bn"?"স্টক":"Stock"}: ${p.stock}</span></div>
+            <div style="font-size:10px;color:var(--mu);margin-top:2px">${p.category?esc(p.category)+" · ":""} ${S.lang==="bn"?"কিনি":"Buy"}: ${fa(p.buyPrice)} · ${S.lang==="bn"?"বেচি":"Sell"}: ${fa(p.sellPrice)} · ${S.lang==="bn"?"মার্জিন":"Margin"}: ${fa(margin)}</div>
+          </div>
+          <button onclick="deleteProduct('${biz.id}','${p.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px;margin-left:8px">✕</button>
+        </div>`;
+      }).join("")}
+    </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// GROCERY LEDGER
+// ══════════════════════════════════════════════════
+function renderGrocLedger(biz){
+  const entries=(biz.ledger||[]).slice().sort((a,b)=>(b.ts||b.date||"").localeCompare(a.ts||a.date||""));
+  const etypeColor={sale:"var(--gr)",purchase:"var(--rd)",cost:"var(--rd)",custPayment:"var(--bl)",compPayment:"var(--am)",income:"var(--gr)"};
+  const etypeLabel={sale:S.lang==="bn"?"বিক্রয়":"Sale",purchase:S.lang==="bn"?"কেনাকাটা":"Purchase",cost:S.lang==="bn"?"খরচ":"Cost",custPayment:S.lang==="bn"?"কাস্টমার পেমেন্ট":"Cust. Payment",compPayment:S.lang==="bn"?"কোম্পানি পেমেন্ট":"Company Payment",income:S.lang==="bn"?"আয়":"Income"};
+  return`<div class="c">
+    <div class="stit">${gl("ledger")}</div>
+    ${entries.length===0?`<div class="empty"><div class="ei">📒</div>${gl("noTx")}</div>`:
+    entries.map(e=>{
+      const isIn=["sale","custPayment","income"].includes(e.etype);
+      const amt=e.etype==="sale"?(e.revenue||0):e.etype==="purchase"?(e.totalCost||0):(e.amount||0);
+      return`<div class="ledger-row">
+        <div class="row"><div style="font-size:11px;font-weight:600">${esc(e.desc||etypeLabel[e.etype]||e.etype)}</div><span style="font-weight:700;color:${isIn?"var(--gr)":"var(--rd)"}">${isIn?"+":"-"}${fa(amt)}</span></div>
+        <div style="display:flex;gap:8px;margin-top:2px;font-size:10px;color:var(--mu)"><span style="background:${etypeColor[e.etype]||"var(--pud)"}22;color:${etypeColor[e.etype]||"var(--pu)"};border-radius:4px;padding:1px 5px;font-weight:600">${etypeLabel[e.etype]||e.etype}</span><span>${(e.ts||e.date||"").split("T")[0]}</span>${e.account?`<span>${e.account}</span>`:""}${e.etype==="sale"&&e.profit!==undefined?`<span style="color:${e.profit>=0?"var(--gr)":"var(--rd)"}">${S.lang==="bn"?"মুনাফা":"Profit"}: ${fa(e.profit)}</span>`:""}</div>
+      </div>`;
+    }).join("")}
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// GROCERY DUES
+// ══════════════════════════════════════════════════
+function renderGrocDues(biz){
+  const custs=biz.customers||[];
+  const comps=biz.companies||[];
+  const totalCust=gTotalCustDue(biz);
+  const totalComp=gTotalCompDue(biz);
   return`
     <div class="c">
       <div class="row" style="margin-bottom:9px">
-        <div class="stit">Business Ledger</div>
-        <button onclick="openBizTx('in')" style="background:var(--gd);color:var(--gr);border:.5px solid rgba(0,200,122,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button>
+        <div><div class="stit" style="margin-bottom:2px">${gl("custDue")}</div><div style="font-size:11px;font-weight:700;color:var(--bl)">${S.lang==="bn"?"মোট বাকি":"Total Due"}: ${fa(totalCust)}</div></div>
+        <button onclick="openGrocModal('custDue')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:5px 11px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ ${S.lang==="bn"?"যোগ":"Add"}</button>
       </div>
-      ${txs.length===0?`<div class="empty"><div class="ei">📒</div>No transactions yet</div>`
-      :txs.map(tx=>`<div class="txc" style="cursor:default">
-        <div style="display:flex;gap:9px;align-items:center">
-          <div class="txi" style="background:${tx.flow==="in"?"var(--gd)":"var(--rdd)"}">${tx.flow==="in"?"💰":"💸"}</div>
-          <div>
-            <div style="font-size:12px;font-weight:600">${esc(tx.desc||tx.cat)}</div>
-            <div style="font-size:10px;color:var(--mu)">${tx.date} · ${tx.account||"Cash"}</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:6px">
-          <span style="font-weight:700;font-size:13px;color:${tx.flow==="in"?"var(--gr)":"var(--rd)"}">${tx.flow==="in"?"+":"-"}${fa(tx.amount||0)}</span>
-          <button onclick="delBizTx('${biz.id}','${tx.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px">✕</button>
-        </div>
-      </div>`).join("")}
+      ${custs.length===0?`<div class="empty" style="padding:16px">${S.lang==="bn"?"কোনো কাস্টমার নেই":"No customers yet"}</div>`
+      :custs.map(c=>{
+        const bal=gCustDueBalance(c);
+        return`<div class="txc" onclick="openDueLedger('cust','${c.id}','${biz.id}')">
+          <div><div style="font-size:12px;font-weight:600">${esc(c.name)}</div><div style="font-size:10px;color:var(--mu)">${esc(c.phone||"")}</div></div>
+          <div style="text-align:right"><div style="font-size:13px;font-weight:700;color:${bal>0?"var(--rd)":bal<0?"var(--gr)":"var(--mu)"}">${fa(bal)}</div><div style="font-size:10px;color:var(--mu)">${(c.history||[]).length} ${S.lang==="bn"?"লেনদেন":"txns"}</div></div>
+        </div>`;
+      }).join("")}
     </div>
-  `;
+    <div class="c">
+      <div class="row" style="margin-bottom:9px">
+        <div><div class="stit" style="margin-bottom:2px">${gl("compDue")}</div><div style="font-size:11px;font-weight:700;color:var(--rd)">${S.lang==="bn"?"মোট বাকি":"Total Due"}: ${fa(totalComp)}</div></div>
+        <button onclick="openGrocModal('compDue')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:5px 11px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ ${S.lang==="bn"?"যোগ":"Add"}</button>
+      </div>
+      ${comps.length===0?`<div class="empty" style="padding:16px">${S.lang==="bn"?"কোনো কোম্পানি নেই":"No companies yet"}</div>`
+      :comps.map(c=>{
+        const bal=gCompDueBalance(c);
+        return`<div class="txc" onclick="openDueLedger('comp','${c.id}','${biz.id}')">
+          <div><div style="font-size:12px;font-weight:600">${esc(c.name)}</div><div style="font-size:10px;color:var(--mu)">${esc(c.supplier||"")} ${c.phone?`· ${esc(c.phone)}`:""}</div></div>
+          <div style="text-align:right"><div style="font-size:13px;font-weight:700;color:${bal>0?"var(--rd)":bal<0?"var(--gr)":"var(--mu)"}">${fa(bal)}</div><div style="font-size:10px;color:var(--mu)">${(c.history||[]).length} ${S.lang==="bn"?"লেনদেন":"txns"}</div></div>
+        </div>`;
+      }).join("")}
+    </div>`;
 }
 
-function renderBizReports(biz){
-  const allRev=(biz.ledger||[]).filter(t=>t.flow==="in").reduce((a,b)=>a+(b.amount||0),0);
-  const allExp=(biz.ledger||[]).filter(t=>t.flow==="out").reduce((a,b)=>a+(b.amount||0),0);
-  const mon=bizMonthData(biz,nowM());
-  const net=allRev-allExp;
-  const mx=Math.max(allRev,allExp,1);
-  const barsH=[{l:"Revenue",v:allRev,c:"var(--gr)"},{l:"Expense",v:allExp,c:"var(--rd)"}];
+// Due ledger view
+function openDueLedger(type,partyId,bizId){
+  const biz=getBiz(bizId);if(!biz)return;
+  const list=type==="cust"?biz.customers||[]:biz.companies||[];
+  const party=list.find(x=>x.id===partyId);if(!party)return;
+  const bal=type==="cust"?gCustDueBalance(party):gCompDueBalance(party);
+  const history=(party.history||[]).slice().sort((a,b)=>(b.ts||"").localeCompare(a.ts||""));
+  const body=document.getElementById("gmodal-body");
+  body.innerHTML=`
+    <div class="row" style="margin-bottom:12px"><div><div style="font-size:15px;font-weight:700">${esc(party.name)}</div><div style="font-size:11px;color:var(--mu)">${S.lang==="bn"?"বর্তমান বাকি":"Current Due"}: <span style="font-weight:700;color:${bal>0?"var(--rd)":"var(--gr)"}">${fa(bal)}</span></div></div><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:13px">
+      <button class="btn btr" style="font-size:12px" onclick="openDueTx('${type}','${partyId}','${bizId}','due')">${S.lang==="bn"?"বাকি যোগ":"Add Due"}</button>
+      <button class="btn btg" style="font-size:12px" onclick="openDueTx('${type}','${partyId}','${bizId}','payment')">${S.lang==="bn"?"পেমেন্ট":"Payment"}</button>
+    </div>
+    <div style="font-size:12px;font-weight:600;margin-bottom:7px">${S.lang==="bn"?"লেনদেনের ইতিহাস":"Transaction History"}</div>
+    ${history.length===0?`<div class="empty" style="padding:16px">${gl("noTx")}</div>`
+    :history.map(h=>`<div class="due-row"><div class="row"><span style="font-weight:600;color:${h.type==="due"?"var(--rd)":"var(--gr)"}">${h.type==="due"?"+":"-"}${fa(h.amount||0)}</span><span style="font-size:10px;color:var(--mu)">${(h.ts||"").split("T")[0]||h.date||""} ${fmtTime(h.ts)}</span></div>${h.notes?`<div style="font-size:10px;color:var(--mu)">${esc(h.notes)}</div>`:""}</div>`).join("")}
+  `;
+  document.getElementById("gmodal").classList.add("open");
+}
+
+function openDueTx(type,partyId,bizId,txType){
+  closeModal("gmodal");
+  const biz=getBiz(bizId);if(!biz)return;
+  const list=type==="cust"?biz.customers||[]:biz.companies||[];
+  const party=list.find(x=>x.id===partyId);if(!party)return;
+  const body=document.getElementById("gmodal-body");
+  body.innerHTML=`
+    <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${txType==="due"?(S.lang==="bn"?"বাকি যোগ":"Add Due"):(S.lang==="bn"?"পেমেন্ট":"Add Payment")} — ${esc(party.name)}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+    <div class="f"><label class="lbl">${gl("amount")}</label><input id="dutamt" type="number" placeholder="0"/></div>
+    <div class="f"><label class="lbl">${gl("date")}</label><input type="date" id="dutdate" value="${nowD()}"/></div>
+    <div class="f"><label class="lbl">${gl("notes")}</label><input id="dutnotes" placeholder="${S.lang==="bn"?"ঐচ্ছিক নোট":"Optional notes"}"/></div>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
+      <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+      <button class="btn ${txType==="due"?"btr":"btg"}" onclick="saveDueTx('${type}','${partyId}','${bizId}','${txType}')">${gl("save")}</button>
+    </div>`;
+  document.getElementById("gmodal").classList.add("open");
+}
+
+function saveDueTx(type,partyId,bizId,txType){
+  const biz=getBiz(bizId);if(!biz)return;
+  const amt=Number(document.getElementById("dutamt").value);
+  if(!amt||amt<=0){alert(gl("invalidInput"));return;}
+  const list=type==="cust"?biz.customers:biz.companies;
+  const party=list.find(x=>x.id===partyId);if(!party)return;
+  const date=document.getElementById("dutdate").value||nowD();
+  const entry={id:uid(),ts:new Date(date+"T12:00:00").toISOString(),date,type:txType,amount:amt,notes:document.getElementById("dutnotes").value};
+  if(!party.history)party.history=[];
+  party.history.push(entry);
+  // Also add to main ledger
+  if(!biz.ledger)biz.ledger=[];
+  const etype=type==="cust"?"custPayment":"compPayment";
+  if(txType==="payment"){
+    biz.ledger.push(mkLedgerEntry(etype,{flow:"in",desc:`${txType==="payment"?gl("payment"):""}: ${party.name}`,amount:amt,account:"Cash",date}));
+  }
+  closeModal("gmodal");
+  refreshGrocery(biz);
+}
+
+// ══════════════════════════════════════════════════
+// GROCERY SHORTLIST
+// ══════════════════════════════════════════════════
+function renderGrocShortlist(biz){
+  const sl=getShortlist(biz);
+  biz.shortlist=sl;
+  return`<div class="c">
+    <div class="row" style="margin-bottom:9px">
+      <div class="stit">${gl("shortlistTitle")}</div>
+      <button onclick="openGrocModal('shortlistAdd')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:5px 11px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">${gl("manualAdd")}</button>
+    </div>
+    ${sl.length===0?`<div class="empty"><div class="ei">📋</div>${S.lang==="bn"?"শর্টলিস্ট ফাঁকা":"Shortlist is empty"}</div>`
+    :sl.map(item=>`<div class="txc" style="cursor:default">
+      <div style="display:flex;gap:8px;align-items:center">
+        <span style="font-size:16px">${item.source==="auto"?"⚠️":"📌"}</span>
+        <div>
+          <div style="font-size:12px;font-weight:600">${esc(item.name||item.productId)}</div>
+          <div style="font-size:10px;color:var(--mu)"><span style="background:${item.source==="auto"?"var(--rdd)":"var(--pud)"};color:${item.source==="auto"?"var(--rd)":"var(--pu)"};border-radius:4px;padding:1px 5px;font-weight:600">${item.source==="auto"?gl("autoItem"):gl("manualItem")}</span></div>
+        </div>
+      </div>
+      <button onclick="removeShortlistItem('${biz.id}','${item.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:12px;padding:3px">${gl("remove")}</button>
+    </div>`).join("")}
+  </div>`;
+}
+function removeShortlistItem(bizId,itemId){
+  const biz=getBiz(bizId);if(!biz)return;
+  biz.shortlist=(biz.shortlist||[]).filter(x=>x.id!==itemId);
+  saveS();
+  const content=document.getElementById("biz-tab-content");
+  if(content)content.innerHTML=renderGrocShortlist(biz);
+}
+
+// ══════════════════════════════════════════════════
+// GROCERY COSTS
+// ══════════════════════════════════════════════════
+function renderGrocCosts(biz){
+  const costEntries=(biz.ledger||[]).filter(e=>e.etype==="cost").sort((a,b)=>(b.ts||"").localeCompare(a.ts||""));
+  const total=gTotalBizCosts(biz);
+  return`<div class="c">
+    <div class="row" style="margin-bottom:9px">
+      <div><div class="stit" style="margin-bottom:2px">${gl("costs")}</div><div style="font-size:11px;font-weight:700;color:var(--rd)">${S.lang==="bn"?"মোট":"Total"}: ${fa(total)}</div></div>
+      <button onclick="openGrocModal('cost')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:5px 11px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">${gl("addCost")}</button>
+    </div>
+    ${costEntries.length===0?`<div class="empty"><div class="ei">💰</div>${gl("noTx")}</div>`
+    :costEntries.map(e=>`<div class="txc" style="cursor:default"><div><div style="font-size:12px;font-weight:600">${esc(e.desc||e.costType||"Cost")}</div><div style="font-size:10px;color:var(--mu)">${(e.ts||"").split("T")[0]||e.date||""}</div></div><span style="font-weight:700;color:var(--rd)">-${fa(e.amount||0)}</span></div>`).join("")}
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// GROCERY REPORTS
+// ══════════════════════════════════════════════════
+function renderGrocReports(biz){
+  const today=bizDayToday();
+  const d={s:today,e:today};
+  const wd={s:weekS(),e:today};
+  const md={s:nowM()+"-01",e:today};
+  const yd={s:nowY()+"-01-01",e:today};
+  function periodData(range){
+    const entries=gPeriodLedger(biz,range.s,range.e);
+    const sales=entries.filter(e=>e.etype==="sale").reduce((s,e)=>s+(e.revenue||0),0);
+    const purchase=entries.filter(e=>e.etype==="purchase").reduce((s,e)=>s+(e.totalCost||0),0);
+    const profit=entries.filter(e=>e.etype==="sale").reduce((s,e)=>s+(e.profit||0),0);
+    const costs=entries.filter(e=>e.etype==="cost").reduce((s,e)=>s+(e.amount||0),0);
+    return{sales,purchase,profit:profit-costs};
+  }
+  const dData=periodData(d),wData=periodData(wd),mData=periodData(md),yData=periodData(yd);
+  function row(l,d,w,m,y){return`<tr><td style="padding:6px 8px;font-size:11px;font-weight:500;border-bottom:.5px solid var(--bd)">${l}</td><td style="padding:6px 8px;font-size:11px;text-align:right;border-bottom:.5px solid var(--bd)">${fa(d)}</td><td style="padding:6px 8px;font-size:11px;text-align:right;border-bottom:.5px solid var(--bd)">${fa(w)}</td><td style="padding:6px 8px;font-size:11px;text-align:right;border-bottom:.5px solid var(--bd)">${fa(m)}</td><td style="padding:6px 8px;font-size:11px;text-align:right;border-bottom:.5px solid var(--bd)">${fa(y)}</td></tr>`;}
+  const mx=Math.max(mData.sales,mData.purchase,1);
   return`
-    <div class="c"><div class="stit">Revenue vs Expense</div>
-      <div class="bchart">${barsH.map(({l,v,c})=>{const h=Math.max(8,Math.round((v/mx)*100));return`<div class="bcol"><span style="font-size:10px;font-weight:600;color:${c}">${fa(v)}</span><div class="brect" style="width:50px;height:${h}%;background:${c};opacity:.85"></div><span style="font-size:10px;color:var(--mu)">${l}</span></div>`;}).join("")}
+    <div class="c"><div class="stit">${S.lang==="bn"?"বিক্রয় বনাম কেনাকাটা":"Sales vs Purchase"}</div>
+      <div class="bchart">${[{l:S.lang==="bn"?"বিক্রয়":"Sales",v:mData.sales,c:"var(--gr)"},{l:S.lang==="bn"?"কেনাকাটা":"Purchase",v:mData.purchase,c:"var(--rd)"},{l:S.lang==="bn"?"মুনাফা":"Profit",v:Math.max(0,mData.profit),c:"var(--pu)"}].map(({l,v,c})=>{const h=Math.max(8,Math.round((v/mx)*100));return`<div class="bcol"><span style="font-size:10px;font-weight:600;color:${c}">${fa(v)}</span><div class="brect" style="width:46px;height:${h}%;background:${c};opacity:.85"></div><span style="font-size:10px;color:var(--mu)">${l}</span></div>`;}).join("")}
       </div>
     </div>
-    <div class="c"><div class="stit">Summary</div>
-      <div class="sg">
-        ${[{l:"Total Revenue",v:allRev,c:"var(--gr)"},{l:"Total Expenses",v:allExp,c:"var(--rd)"},{l:"Net Profit",v:net,c:net>=0?"var(--pu)":"var(--rd)"},{l:"Month Profit",v:mon.profit,c:"var(--am)"}].map(({l,v,c})=>`<div style="background:var(--c2);border:.5px solid var(--bd);border-radius:var(--rs);padding:11px"><div style="font-size:10px;color:var(--mu);margin-bottom:2px">${l}</div><div style="font-size:14px;font-weight:700;color:${c}">${fa(v)}</div></div>`).join("")}
-      </div>
+    <div class="c"><div class="stit">${S.lang==="bn"?"বিশদ রিপোর্ট":"Detailed Report"}</div>
+      <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse">
+        <thead><tr>${["",S.lang==="bn"?"আজ":"Today",S.lang==="bn"?"সপ্তাহ":"Week",S.lang==="bn"?"মাস":"Month",S.lang==="bn"?"বছর":"Year"].map(h=>`<th style="padding:6px 8px;font-size:10px;color:var(--mu);font-weight:600;text-align:right;border-bottom:.5px solid var(--bd)">${h}</th>`).join("")}</tr></thead>
+        <tbody>
+          ${row(S.lang==="bn"?"বিক্রয়":"Sales",dData.sales,wData.sales,mData.sales,yData.sales)}
+          ${row(S.lang==="bn"?"কেনাকাটা":"Purchase",dData.purchase,wData.purchase,mData.purchase,yData.purchase)}
+          ${row(S.lang==="bn"?"মুনাফা":"Profit",dData.profit,wData.profit,mData.profit,yData.profit)}
+        </tbody>
+      </table></div>
     </div>
     <div class="c"><div class="stit">Export</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <button class="btn btr" onclick="expBizPDF()" style="font-size:12px">PDF Report</button>
-        <button class="btn btg" onclick="expBizCSV()" style="font-size:12px">CSV / Excel</button>
+        <button class="btn btr" onclick="expGrocPDF('${biz.id}')" style="font-size:12px">PDF</button>
+        <button class="btn btg" onclick="expGrocCSV('${biz.id}')" style="font-size:12px">CSV</button>
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
-// ── FREELANCER ───────────────────────────────────────────
-function renderClients(biz){
-  const clients=biz.clients||[];
-  return`<div class="c">
-    <div class="row" style="margin-bottom:9px"><div class="stit">Clients (${clients.length})</div><button onclick="openBizModal('client')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
-    ${clients.length===0?`<div class="empty"><div class="ei">👤</div>No clients yet</div>`
-    :clients.map(c=>`<div class="txc" style="cursor:default">
-      <div><div style="font-size:12px;font-weight:600">${esc(c.name)}</div><div style="font-size:10px;color:var(--mu)">${esc(c.contact||"")} ${c.notes?`· ${esc(c.notes)}`:""}</div></div>
-      <button onclick="delBizItem('clients','${c.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px">✕</button>
-    </div>`).join("")}
-  </div>`;
-}
-function renderProjects(biz){
-  const projs=biz.projects||[];
-  const statusClass={Pending:"sb-pending","In Progress":"sb-progress",Completed:"sb-done"};
-  const payClass={Paid:"sb-paid","Partial Paid":"sb-partial",Unpaid:"sb-unpaid"};
-  return`<div class="c">
-    <div class="row" style="margin-bottom:9px"><div class="stit">Projects (${projs.length})</div><button onclick="openBizModal('project')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
-    ${projs.length===0?`<div class="empty"><div class="ei">📋</div>No projects yet</div>`
-    :projs.map(p=>`<div class="txc" style="cursor:default">
-      <div style="flex:1">
-        <div class="row"><div style="font-size:12px;font-weight:600">${esc(p.name)}</div><span style="font-weight:700;font-size:13px;color:var(--gr)">${fa(p.value||0)}</span></div>
-        <div style="display:flex;gap:5px;margin-top:4px;align-items:center;flex-wrap:wrap">
-          <span class="status-badge ${statusClass[p.status]||"sb-pending"}">${p.status}</span>
-          <span class="status-badge ${payClass[p.payStatus]||"sb-unpaid"}">${p.payStatus}</span>
-          ${p.client?`<span style="font-size:10px;color:var(--mu)">${esc(p.client)}</span>`:""}
-          ${p.due?`<span style="font-size:10px;color:var(--mu)">Due: ${p.due}</span>`:""}
-        </div>
-      </div>
-      <button onclick="delBizItem('projects','${p.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px;margin-left:8px">✕</button>
-    </div>`).join("")}
-  </div>`;
-}
-
-// ── GROCERY ──────────────────────────────────────────────
-function renderInventory(biz){
-  const inv=biz.inventory||[];
-  const low=inv.filter(p=>p.stock<=p.minStock);
-  return`
-    ${low.length>0?`<div class="c" style="border-color:rgba(245,158,11,.3)"><div class="stit" style="color:var(--am)">⚠️ Low Stock Alert</div>${low.map(p=>`<div class="low-stock"><span>${esc(p.name)}</span><span style="color:var(--am);font-weight:600">Stock: ${p.stock} (min ${p.minStock})</span></div>`).join("")}</div>`:""}
-    <div class="c">
-      <div class="row" style="margin-bottom:9px"><div class="stit">Inventory (${inv.length})</div><button onclick="openBizModal('product')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
-      ${inv.length===0?`<div class="empty"><div class="ei">📦</div>No products yet</div>`
-      :inv.map(p=>`<div class="txc" style="cursor:default">
-        <div style="flex:1">
-          <div class="row"><div style="font-size:12px;font-weight:600">${esc(p.name)}</div><span style="font-size:12px;font-weight:700;color:${p.stock<=p.minStock?"var(--am)":"var(--gr)"}">Qty: ${p.stock}</span></div>
-          <div style="display:flex;gap:10px;margin-top:3px;font-size:10px;color:var(--mu)">
-            <span>Buy: ${fa(p.buyPrice||0)}</span><span>Sell: ${fa(p.sellPrice||0)}</span>
-            <span>Margin: ${fa((p.sellPrice||0)-(p.buyPrice||0))}</span>
-          </div>
-        </div>
-        <button onclick="delBizItem('inventory','${p.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px;margin-left:8px">✕</button>
-      </div>`).join("")}
-    </div>
-    <div class="c">
-      <div class="stit">Record Sale / Purchase</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">
-        <button class="btn btg" style="font-size:12px" onclick="openBizModal('sale')">Record Sale</button>
-        <button class="btn btr" style="font-size:12px" onclick="openBizModal('purchase')">Record Purchase</button>
-      </div>
-    </div>
-  `;
-}
-function renderDues(biz){
-  const cDues=biz.custDues||[];const sDues=biz.suppDues||[];
-  const totalCust=cDues.reduce((a,b)=>a+(b.remaining||0),0);
-  const totalSupp=sDues.reduce((a,b)=>a+(b.remaining||0),0);
-  return`
-    <div class="c">
-      <div class="row" style="margin-bottom:9px"><div class="stit">Customer Dues · ${fa(totalCust)}</div><button onclick="openBizModal('custDue')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
-      ${cDues.length===0?`<div class="empty" style="padding:16px">No customer dues</div>`
-      :cDues.map(d=>`<div class="txc" style="cursor:default"><div><div style="font-size:12px;font-weight:600">${esc(d.name)}</div><div style="font-size:10px;color:var(--mu)">${esc(d.phone||"")} ${d.notes?`· ${esc(d.notes)}`:""}</div></div><div style="text-align:right"><div style="font-size:13px;font-weight:700;color:var(--bl)">${fa(d.remaining||0)}</div><div style="font-size:10px;color:var(--mu)">Paid: ${fa(d.paid||0)} / ${fa(d.total||0)}</div></div></div>`).join("")}
-    </div>
-    <div class="c">
-      <div class="row" style="margin-bottom:9px"><div class="stit">Supplier Dues · ${fa(totalSupp)}</div><button onclick="openBizModal('suppDue')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
-      ${sDues.length===0?`<div class="empty" style="padding:16px">No supplier dues</div>`
-      :sDues.map(d=>`<div class="txc" style="cursor:default"><div><div style="font-size:12px;font-weight:600">${esc(d.name)}</div><div style="font-size:10px;color:var(--mu)">${esc(d.phone||"")} ${d.notes?`· ${esc(d.notes)}`:""}</div></div><div style="text-align:right"><div style="font-size:13px;font-weight:700;color:var(--rd)">${fa(d.remaining||0)}</div><div style="font-size:10px;color:var(--mu)">Paid: ${fa(d.paid||0)} / ${fa(d.total||0)}</div></div></div>`).join("")}
-    </div>
-  `;
-}
-
-// ── BIZ MODAL SYSTEM ────────────────────────────────────
-function openBizCreate(){openBizMForm("create");}
-function openBizEdit(id){openBizMForm("edit",id);}
-function openBizTx(flow){openBizMForm("tx",null,flow);}
-function openBizModal(type){openBizMForm(type);}
-
-function openBizMForm(type,id,extra){
-  const body=document.getElementById("biz-modal-body");
-  if(type==="create"||type==="edit"){
-    const biz=id?getBiz(id):null;
+// ══════════════════════════════════════════════════
+// GROCERY MODAL FORMS
+// ══════════════════════════════════════════════════
+function openGrocModal(type){
+  const biz=activeBiz();if(!biz||biz.type!=="Grocery Store")return;
+  const body=document.getElementById("gmodal-body");
+  if(type==="addProduct"){
     body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">${biz?"Edit Business":"Create Business"}</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Business Name</label><input id="bname" value="${esc(biz?.name||"")}" placeholder="e.g. Rahman Store"/></div>
-      <div class="f"><label class="lbl">Business Type</label><select id="btype">${BIZ_TYPES.map(t=>`<option${biz?.type===t?" selected":""}>${t}</option>`).join("")}</select></div>
-      <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn btp" onclick="saveBiz('${id||""}')">${biz?"Update":"Create Business"}</button>
-      </div>`;
-  }else if(type==="tx"){
-    const biz=activeBiz();if(!biz)return;
-    const flow=extra||"in";
-    body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">${flow==="in"?"Add Income / Sale":"Add Expense / Cost"}</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Description</label><input id="btdesc" placeholder="e.g. Product sale, Rent..."/></div>
+      <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${gl("addProduct")}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+      <div class="f"><label class="lbl">${gl("productName")} *</label><input id="gp-name" placeholder="${S.lang==="bn"?"যেমন: PRAN Up 1L":"e.g. PRAN Up 1L"}"/></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div class="f"><label class="lbl">Amount</label><input id="btamt" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Account</label><select id="btacc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
-        <div class="f"><label class="lbl">Category</label><input id="btcat" placeholder="e.g. Sale, Rent, Salary"/></div>
-        <div class="f"><label class="lbl">Date</label><input type="date" id="btdate" value="${nowD()}"/></div>
+        <div class="f"><label class="lbl">${gl("category")}</label><input id="gp-cat" placeholder="${S.lang==="bn"?"পানীয়, চাল...":"Drinks, Rice..."}"/></div>
+        <div class="f"><label class="lbl">${gl("quantity")} *</label><input id="gp-qty" type="number" placeholder="10"/></div>
+        <div class="f"><label class="lbl">${gl("buyPricePerPc")} *</label><input id="gp-buy" type="number" placeholder="55" oninput="gpCalc()"/></div>
+        <div class="f"><label class="lbl">${gl("sellPricePerPc")} *</label><input id="gp-sell" type="number" placeholder="60"/></div>
+        <div class="f"><label class="lbl">${gl("totalPurchaseCost")} *</label><input id="gp-total" type="number" placeholder="550" oninput="gpCalcFromTotal()"/></div>
+        <div class="f"><label class="lbl">${gl("minStock")}</label><input id="gp-min" type="number" placeholder="5"/></div>
       </div>
+      <div id="gp-preview" style="display:none;background:var(--gd);border:.5px solid rgba(0,200,122,.25);border-radius:var(--rs);padding:8px 11px;font-size:11px;color:var(--gr);margin-bottom:9px"></div>
+      <div class="f"><label class="lbl">${gl("account")}</label><select id="gp-acc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
+      <div class="f"><label class="lbl">${gl("date")}</label><input type="date" id="gp-date" value="${nowD()}"/></div>
       <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn ${flow==="in"?"btg":"btr"}" onclick="saveBizTx('${flow}')">Save Transaction</button>
-      </div>`;
-  }else if(type==="client"){
-    body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">Add Client</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Client Name</label><input id="clname" placeholder="Full Name"/></div>
-      <div class="f"><label class="lbl">Contact</label><input id="clcontact" placeholder="Phone / Email"/></div>
-      <div class="f"><label class="lbl">Notes</label><input id="clnotes" placeholder="Optional notes"/></div>
-      <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn btp" onclick="saveClient()">Add Client</button>
-      </div>`;
-  }else if(type==="project"){
-    const biz=activeBiz();
-    const clients=(biz?.clients||[]).map(c=>c.name);
-    body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">Add Project</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Project Name</label><input id="pjname" placeholder="Project title"/></div>
-      <div class="f"><label class="lbl">Client</label><select id="pjclient"><option value="">— Select Client —</option>${clients.map(c=>`<option>${c}</option>`).join("")}</select></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div class="f"><label class="lbl">Value</label><input id="pjvalue" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Due Date</label><input type="date" id="pjdue"/></div>
-        <div class="f"><label class="lbl">Status</label><select id="pjstatus"><option>Pending</option><option>In Progress</option><option>Completed</option></select></div>
-        <div class="f"><label class="lbl">Payment</label><select id="pjpay"><option>Unpaid</option><option>Partial Paid</option><option>Paid</option></select></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn btp" onclick="saveProject()">Add Project</button>
-      </div>`;
-  }else if(type==="product"){
-    body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">Add Product</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Product Name</label><input id="prname" placeholder="e.g. Rice 5kg"/></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div class="f"><label class="lbl">Current Stock</label><input id="prstock" type="number" placeholder="100"/></div>
-        <div class="f"><label class="lbl">Min Stock</label><input id="prmin" type="number" placeholder="10"/></div>
-        <div class="f"><label class="lbl">Buy Price</label><input id="prbuy" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Sell Price</label><input id="prsell" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Category</label><input id="prcat" placeholder="Grains, Dairy..."/></div>
-        <div class="f"><label class="lbl">Supplier</label><input id="prsupplier" placeholder="Supplier name"/></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn btp" onclick="saveProduct()">Add Product</button>
+        <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+        <button class="btn btp" onclick="saveGrocProduct()">${gl("save")}</button>
       </div>`;
   }else if(type==="sale"){
-    const biz=activeBiz();
-    const inv=biz?.inventory||[];
+    const prods=biz.products||[];
+    if(prods.length===0){alert(S.lang==="bn"?"আগে পণ্য যোগ করুন":"Add products first");return;}
     body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">Record Sale</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Product</label><select id="salepr">${inv.map(p=>`<option value="${p.id}">${esc(p.name)} (Stock: ${p.stock})</option>`).join("")}</select></div>
+      <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${gl("recordSale")}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+      <div class="f"><label class="lbl">${gl("selectProduct")} *</label><select id="gs-prod" onchange="gsLoadPrice()">${prods.map(p=>`<option value="${p.id}">${esc(p.name)} (${S.lang==="bn"?"স্টক":"Stock"}: ${p.stock})</option>`).join("")}</select></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div class="f"><label class="lbl">Qty Sold</label><input id="saleqty" type="number" placeholder="1" value="1"/></div>
-        <div class="f"><label class="lbl">Selling Price</label><input id="saleprice" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Account</label><select id="saleacc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
-        <div class="f"><label class="lbl">Date</label><input type="date" id="saledate" value="${nowD()}"/></div>
+        <div class="f"><label class="lbl">${gl("qtySold")} *</label><input id="gs-qty" type="number" placeholder="1" value="1" oninput="gsCalc()"/></div>
+        <div class="f"><label class="lbl">${gl("sellingPrice")} *</label><input id="gs-price" type="number" placeholder="60" oninput="gsCalc()"/></div>
       </div>
+      <div id="gs-preview" style="background:var(--c2);border-radius:var(--rs);padding:9px 11px;font-size:11px;margin-bottom:9px"></div>
+      <div class="f"><label class="lbl">${gl("account")}</label><select id="gs-acc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
+      <div class="f"><label class="lbl">${gl("date")}</label><input type="date" id="gs-date" value="${nowD()}"/></div>
       <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn btg" onclick="recordSale()">Record Sale</button>
+        <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+        <button class="btn btg" onclick="saveGrocSale()">${gl("save")}</button>
       </div>`;
+    setTimeout(gsLoadPrice,30);
   }else if(type==="purchase"){
-    const biz=activeBiz();
-    const inv=biz?.inventory||[];
+    const prods=biz.products||[];
+    if(prods.length===0){alert(S.lang==="bn"?"আগে পণ্য যোগ করুন":"Add products first");return;}
     body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">Record Purchase</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Product</label><select id="purpr">${inv.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join("")}</select></div>
+      <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${gl("recordPurchase")}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+      <div class="f"><label class="lbl">${gl("selectProduct")} *</label><select id="gpur-prod" onchange="gpurLoadPrice()">${prods.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join("")}</select></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div class="f"><label class="lbl">Qty</label><input id="purqty" type="number" placeholder="10" value="1"/></div>
-        <div class="f"><label class="lbl">Purchase Cost</label><input id="purprice" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Account</label><select id="puracc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
-        <div class="f"><label class="lbl">Supplier</label><input id="pursup" placeholder="Supplier name"/></div>
+        <div class="f"><label class="lbl">${gl("quantity")} *</label><input id="gpur-qty" type="number" placeholder="10" value="1" oninput="gpurCalc()"/></div>
+        <div class="f"><label class="lbl">${gl("buyPricePerPc")} *</label><input id="gpur-buy" type="number" placeholder="55" oninput="gpurCalc()"/></div>
       </div>
+      <div id="gpur-preview" style="background:var(--c2);border-radius:var(--rs);padding:9px 11px;font-size:11px;margin-bottom:9px"></div>
+      <div class="f"><label class="lbl">${gl("account")}</label><select id="gpur-acc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
+      <div class="f"><label class="lbl">${gl("date")}</label><input type="date" id="gpur-date" value="${nowD()}"/></div>
       <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn btr" onclick="recordPurchase()">Record Purchase</button>
+        <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+        <button class="btn btr" onclick="saveGrocPurchase()">${gl("save")}</button>
       </div>`;
-  }else if(type==="custDue"||type==="suppDue"){
-    const isCust=type==="custDue";
+    setTimeout(gpurLoadPrice,30);
+  }else if(type==="cost"){
+    const costTypes=gl("costTypes");
     body.innerHTML=`
-      <div class="row" style="margin-bottom:13px"><span style="font-size:15px;font-weight:700">Add ${isCust?"Customer":"Supplier"} Due</span><button onclick="closeModal('biz-modal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
-      <div class="f"><label class="lbl">Name</label><input id="duename" placeholder="${isCust?"Customer":"Supplier"} name"/></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div class="f"><label class="lbl">Phone</label><input id="duephone" placeholder="01XXXXXXXXX"/></div>
-        <div class="f"><label class="lbl">Total Amount</label><input id="duetotal" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Paid Amount</label><input id="duepaid" type="number" placeholder="0"/></div>
-        <div class="f"><label class="lbl">Notes</label><input id="duenotes" placeholder="Optional"/></div>
-      </div>
+      <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${gl("addCost")}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+      <div class="f"><label class="lbl">${gl("costType")}</label><select id="gc-type">${costTypes.map(t=>`<option>${t}</option>`).join("")}</select></div>
+      <div class="f"><label class="lbl">${S.lang==="bn"?"বিবরণ":"Description"}</label><input id="gc-desc" placeholder="${S.lang==="bn"?"ঐচ্ছিক":"Optional"}"/></div>
+      <div class="f"><label class="lbl">${gl("amount")} *</label><input id="gc-amt" type="number" placeholder="0"/></div>
+      <div class="f"><label class="lbl">${gl("account")}</label><select id="gc-acc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
+      <div class="f"><label class="lbl">${gl("date")}</label><input type="date" id="gc-date" value="${nowD()}"/></div>
       <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
-        <button class="btn btgh" onclick="closeModal('biz-modal')">Cancel</button>
-        <button class="btn btp" onclick="saveDue('${type}')">Save</button>
+        <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+        <button class="btn btr" onclick="saveGrocCost()">${gl("save")}</button>
+      </div>`;
+  }else if(type==="custDue"){
+    body.innerHTML=`
+      <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${gl("addCustDue")}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+      <div class="f"><label class="lbl">${gl("customerName")} *</label><input id="gcd-name" placeholder=""/></div>
+      <div class="f"><label class="lbl">${gl("phone")}</label><input id="gcd-phone" placeholder="01XXXXXXXXX"/></div>
+      <div class="f"><label class="lbl">${gl("notes")}</label><input id="gcd-notes" placeholder=""/></div>
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
+        <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+        <button class="btn btp" onclick="saveGrocCust()">${gl("save")}</button>
+      </div>`;
+  }else if(type==="compDue"){
+    body.innerHTML=`
+      <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${gl("addCompDue")}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+      <div class="f"><label class="lbl">${gl("companyName")} *</label><input id="gcmp-name" placeholder=""/></div>
+      <div class="f"><label class="lbl">${gl("supplierName")}</label><input id="gcmp-sup" placeholder=""/></div>
+      <div class="f"><label class="lbl">${gl("phone")}</label><input id="gcmp-phone" placeholder="01XXXXXXXXX"/></div>
+      <div class="f"><label class="lbl">${gl("address")}</label><input id="gcmp-addr" placeholder=""/></div>
+      <div class="f"><label class="lbl">${gl("notes")}</label><input id="gcmp-notes" placeholder=""/></div>
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
+        <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+        <button class="btn btp" onclick="saveGrocComp()">${gl("save")}</button>
+      </div>`;
+  }else if(type==="shortlistAdd"){
+    body.innerHTML=`
+      <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${gl("manualAdd")}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+      <div class="f"><label class="lbl">${S.lang==="bn"?"পণ্যের নাম":"Item Name"} *</label><input id="gsl-name" placeholder=""/></div>
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
+        <button class="btn btgh" onclick="closeModal('gmodal')">${gl("cancel")}</button>
+        <button class="btn btp" onclick="saveShortlistManual()">${gl("save")}</button>
       </div>`;
   }
-  document.getElementById("biz-modal").classList.add("open");
+  document.getElementById("gmodal").classList.add("open");
 }
 
-// ── BIZ SAVE FUNCTIONS ───────────────────────────────────
+// Product preview helpers
+function gpCalc(){
+  const qty=Number(document.getElementById("gp-qty")?.value||0);
+  const buy=Number(document.getElementById("gp-buy")?.value||0);
+  if(qty&&buy){const tot=qty*buy;const el=document.getElementById("gp-total");if(el)el.value=tot;}
+  gpPreview();
+}
+function gpCalcFromTotal(){
+  const qty=Number(document.getElementById("gp-qty")?.value||0);
+  const tot=Number(document.getElementById("gp-total")?.value||0);
+  if(qty&&tot){const el=document.getElementById("gp-buy");if(el)el.value=(tot/qty).toFixed(2);}
+  gpPreview();
+}
+function gpPreview(){
+  const buy=Number(document.getElementById("gp-buy")?.value||0);
+  const sell=Number(document.getElementById("gp-sell")?.value||0);
+  const qty=Number(document.getElementById("gp-qty")?.value||0);
+  const tot=Number(document.getElementById("gp-total")?.value||0);
+  const prev=document.getElementById("gp-preview");
+  if(!prev)return;
+  if(buy&&sell&&qty){
+    prev.style.display="block";
+    const margin=sell-buy;
+    prev.textContent=`${S.lang==="bn"?"মার্জিন":"Margin"}: ${fa(margin)}/pc · ${S.lang==="bn"?"মোট মূল্য":"Total cost"}: ${fa(tot||qty*buy)}`;
+    prev.style.color=margin>=0?"var(--gr)":"var(--rd)";
+  }else prev.style.display="none";
+}
+
+function gsLoadPrice(){
+  const biz=activeBiz();if(!biz)return;
+  const pid=document.getElementById("gs-prod")?.value;
+  const prod=biz.products?.find(p=>p.id===pid);
+  if(prod){const el=document.getElementById("gs-price");if(el)el.value=prod.sellPrice||"";}
+  gsCalc();
+}
+function gsCalc(){
+  const biz=activeBiz();if(!biz)return;
+  const pid=document.getElementById("gs-prod")?.value;
+  const prod=biz.products?.find(p=>p.id===pid);
+  if(!prod)return;
+  const qty=Number(document.getElementById("gs-qty")?.value||0);
+  const sellP=Number(document.getElementById("gs-price")?.value||0);
+  const prev=document.getElementById("gs-preview");if(!prev)return;
+  if(qty&&sellP){
+    const rev=sellP*qty;const cogs=prod.buyPrice*qty;const profit=rev-cogs;
+    const isLoss=profit<0;
+    prev.innerHTML=`<div class="row"><span style="color:var(--mu)">${gl("revenue")}</span><span style="color:var(--gr);font-weight:700">${fa(rev)}</span></div><div class="row"><span style="color:var(--mu)">${gl("cogs")}</span><span style="color:var(--rd)">${fa(cogs)}</span></div><div class="row"><span style="color:var(--mu)">${isLoss?gl("loss"):gl("profit")}</span><span style="font-weight:700;color:${profit>=0?"var(--pu)":"var(--rd)"}">${fa(profit)}</span></div>${isLoss?`<div style="font-size:10px;color:var(--rd);margin-top:4px">⚠️ ${gl("buyBelow")}</div>`:""}`;
+  }else{prev.innerHTML="";}
+}
+
+function gpurLoadPrice(){
+  const biz=activeBiz();if(!biz)return;
+  const pid=document.getElementById("gpur-prod")?.value;
+  const prod=biz.products?.find(p=>p.id===pid);
+  if(prod){const el=document.getElementById("gpur-buy");if(el)el.value=prod.buyPrice||"";}
+  gpurCalc();
+}
+function gpurCalc(){
+  const biz=activeBiz();if(!biz)return;
+  const qty=Number(document.getElementById("gpur-qty")?.value||0);
+  const buy=Number(document.getElementById("gpur-buy")?.value||0);
+  const prev=document.getElementById("gpur-preview");if(!prev)return;
+  if(qty&&buy){prev.innerHTML=`<div class="row"><span style="color:var(--mu)">${S.lang==="bn"?"মোট খরচ":"Total Cost"}</span><span style="font-weight:700;color:var(--rd)">${fa(qty*buy)}</span></div>`;}
+  else prev.innerHTML="";
+}
+
+// ══════════════════════════════════════════════════
+// GROCERY SAVE FUNCTIONS
+// ══════════════════════════════════════════════════
+function saveGrocProduct(){
+  const biz=activeBiz();if(!biz)return;
+  const name=document.getElementById("gp-name").value.trim();
+  const qty=Number(document.getElementById("gp-qty").value);
+  const buy=Number(document.getElementById("gp-buy").value);
+  const sell=Number(document.getElementById("gp-sell").value);
+  const total=Number(document.getElementById("gp-total").value)||qty*buy;
+  const min=Number(document.getElementById("gp-min").value)||5;
+  if(!name||qty<=0||buy<=0||sell<=0){alert(gl("invalidInput"));return;}
+  if(!biz.products)biz.products=[];
+  const prod={id:uid(),name,category:document.getElementById("gp-cat").value,stock:qty,buyPrice:buy,sellPrice:sell,minStock:min,totalPurchaseCost:total};
+  biz.products.push(prod);
+  // Ledger entry for initial purchase
+  if(!biz.ledger)biz.ledger=[];
+  const date=document.getElementById("gp-date").value||nowD();
+  biz.ledger.push(mkLedgerEntry("purchase",{flow:"out",desc:`${S.lang==="bn"?"কেনাকাটা":"Purchase"}: ${name} ×${qty}`,totalCost:total,buyPricePerPc:buy,qty,productId:prod.id,account:document.getElementById("gp-acc").value,date}));
+  closeModal("gmodal");
+  refreshGrocery(biz);
+}
+
+function saveGrocSale(){
+  const biz=activeBiz();if(!biz)return;
+  const pid=document.getElementById("gs-prod").value;
+  const prod=biz.products?.find(p=>p.id===pid);
+  if(!prod){alert(S.lang==="bn"?"পণ্য পাওয়া যায়নি":"Product not found");return;}
+  const qty=Number(document.getElementById("gs-qty").value);
+  const sellP=Number(document.getElementById("gs-price").value);
+  if(!qty||qty<=0||!sellP||sellP<=0){alert(gl("invalidInput"));return;}
+  if(qty>prod.stock){alert(`${gl("insufficientStock")}: ${prod.stock} left`);return;}
+  const revenue=sellP*qty;
+  const cogs=prod.buyPrice*qty;
+  const profit=revenue-cogs;
+  prod.stock-=qty;
+  const date=document.getElementById("gs-date").value||nowD();
+  if(!biz.ledger)biz.ledger=[];
+  biz.ledger.push(mkLedgerEntry("sale",{flow:"in",desc:`${S.lang==="bn"?"বিক্রয়":"Sale"}: ${prod.name} ×${qty}`,revenue,cogs,profit,sellPricePerPc:sellP,qty,productId:pid,account:document.getElementById("gs-acc").value,amount:revenue,date}));
+  closeModal("gmodal");
+  refreshGrocery(biz);
+}
+
+function saveGrocPurchase(){
+  const biz=activeBiz();if(!biz)return;
+  const pid=document.getElementById("gpur-prod").value;
+  const prod=biz.products?.find(p=>p.id===pid);
+  if(!prod){alert(S.lang==="bn"?"পণ্য পাওয়া যায়নি":"Product not found");return;}
+  const qty=Number(document.getElementById("gpur-qty").value);
+  const buy=Number(document.getElementById("gpur-buy").value);
+  if(!qty||qty<=0||!buy||buy<=0){alert(gl("invalidInput"));return;}
+  const total=qty*buy;
+  prod.stock+=qty;
+  prod.buyPrice=buy; // update buy price
+  const date=document.getElementById("gpur-date").value||nowD();
+  if(!biz.ledger)biz.ledger=[];
+  biz.ledger.push(mkLedgerEntry("purchase",{flow:"out",desc:`${S.lang==="bn"?"কেনাকাটা":"Purchase"}: ${prod.name} ×${qty}`,totalCost:total,buyPricePerPc:buy,qty,productId:pid,account:document.getElementById("gpur-acc").value,amount:total,date}));
+  closeModal("gmodal");
+  refreshGrocery(biz);
+}
+
+function saveGrocCost(){
+  const biz=activeBiz();if(!biz)return;
+  const amt=Number(document.getElementById("gc-amt").value);
+  if(!amt||amt<=0){alert(gl("invalidInput"));return;}
+  const costType=document.getElementById("gc-type").value;
+  const desc=document.getElementById("gc-desc").value||costType;
+  const date=document.getElementById("gc-date").value||nowD();
+  if(!biz.ledger)biz.ledger=[];
+  biz.ledger.push(mkLedgerEntry("cost",{flow:"out",desc,costType,amount:amt,account:document.getElementById("gc-acc").value,date}));
+  closeModal("gmodal");
+  refreshGrocery(biz);
+}
+
+function saveGrocCust(){
+  const biz=activeBiz();if(!biz)return;
+  const name=document.getElementById("gcd-name").value.trim();
+  if(!name){alert(gl("invalidInput"));return;}
+  if(!biz.customers)biz.customers=[];
+  biz.customers.push({id:uid(),name,phone:document.getElementById("gcd-phone").value,notes:document.getElementById("gcd-notes").value,history:[]});
+  closeModal("gmodal");
+  refreshGrocery(biz);
+}
+
+function saveGrocComp(){
+  const biz=activeBiz();if(!biz)return;
+  const name=document.getElementById("gcmp-name").value.trim();
+  if(!name){alert(gl("invalidInput"));return;}
+  if(!biz.companies)biz.companies=[];
+  biz.companies.push({id:uid(),name,supplier:document.getElementById("gcmp-sup").value,phone:document.getElementById("gcmp-phone").value,address:document.getElementById("gcmp-addr").value,notes:document.getElementById("gcmp-notes").value,history:[]});
+  closeModal("gmodal");
+  refreshGrocery(biz);
+}
+
+function saveShortlistManual(){
+  const biz=activeBiz();if(!biz)return;
+  const name=document.getElementById("gsl-name").value.trim();
+  if(!name)return;
+  if(!biz.shortlist)biz.shortlist=[];
+  biz.shortlist.push({id:uid(),name,source:"manual"});
+  closeModal("gmodal");
+  saveS();
+  const content=document.getElementById("biz-tab-content");
+  if(content)content.innerHTML=renderGrocShortlist(biz);
+}
+
+function deleteProduct(bizId,prodId){
+  if(!confirm(S.lang==="bn"?"এই পণ্য মুছবেন?":"Delete this product?"))return;
+  const biz=getBiz(bizId);if(!biz)return;
+  biz.products=(biz.products||[]).filter(p=>p.id!==prodId);
+  refreshGrocery(biz);
+}
+
+// ══════════════════════════════════════════════════
+// NON-GROCERY BUSINESS (Freelancer/Agency/etc)
+// ══════════════════════════════════════════════════
+function renderGenBizDash(biz){
+  const allRev=(biz.ledger||[]).filter(e=>e.flow==="in").reduce((s,e)=>s+(e.amount||0),0);
+  const allExp=(biz.ledger||[]).filter(e=>e.flow==="out").reduce((s,e)=>s+(e.amount||0),0);
+  return`
+    <div class="hero" style="padding:14px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div><div class="hilbl">Total Revenue</div><div style="font-size:17px;font-weight:700;color:var(--gr)">${fa(allRev)}</div></div>
+        <div><div class="hilbl">Net Profit</div><div style="font-size:17px;font-weight:700;color:${(allRev-allExp)>=0?"var(--pu)":"var(--rd)"}">${fa(allRev-allExp)}</div></div>
+      </div>
+    </div>
+    <div class="c">
+      <div class="stit">Add Transaction</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">
+        <button class="btn btg" style="font-size:12px" onclick="openGenBizTx('${biz.id}','in')">+ Income</button>
+        <button class="btn btr" style="font-size:12px" onclick="openGenBizTx('${biz.id}','out')">- Expense</button>
+      </div>
+    </div>`;
+}
+
+function renderGenLedger(biz){
+  const entries=(biz.ledger||[]).slice().sort((a,b)=>(b.ts||b.date||"").localeCompare(a.ts||a.date||""));
+  return`<div class="c">
+    <div class="row" style="margin-bottom:9px"><div class="stit">Ledger</div><button onclick="openGenBizTx('${biz.id}','in')" style="background:var(--gd);color:var(--gr);border:.5px solid rgba(0,200,122,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
+    ${entries.length===0?`<div class="empty"><div class="ei">📒</div>No transactions yet</div>`
+    :entries.map(e=>`<div class="txc" style="cursor:default"><div style="display:flex;gap:9px;align-items:center"><div class="txi" style="background:${e.flow==="in"?"var(--gd)":"var(--rdd)"}">${e.flow==="in"?"💰":"💸"}</div><div><div style="font-size:12px;font-weight:600">${esc(e.desc||"")}</div><div style="font-size:10px;color:var(--mu)">${(e.ts||"").split("T")[0]||e.date||""} ${e.account?`· ${e.account}`:""}</div></div></div><div style="display:flex;align-items:center;gap:6px"><span style="font-weight:700;font-size:13px;color:${e.flow==="in"?"var(--gr)":"var(--rd)"}">${e.flow==="in"?"+":"-"}${fa(e.amount||0)}</span><button onclick="delGenLedgerEntry('${biz.id}','${e.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px">✕</button></div></div>`).join("")}
+  </div>`;
+}
+
+function renderGenReports(biz){
+  const rev=(biz.ledger||[]).filter(e=>e.flow==="in").reduce((s,e)=>s+(e.amount||0),0);
+  const exp=(biz.ledger||[]).filter(e=>e.flow==="out").reduce((s,e)=>s+(e.amount||0),0);
+  const net=rev-exp;const mx=Math.max(rev,exp,1);
+  return`<div class="c"><div class="stit">Reports</div>
+    <div class="bchart">${[{l:"Revenue",v:rev,c:"var(--gr)"},{l:"Expense",v:exp,c:"var(--rd)"}].map(({l,v,c})=>{const h=Math.max(8,Math.round((v/mx)*100));return`<div class="bcol"><span style="font-size:10px;font-weight:600;color:${c}">${fa(v)}</span><div class="brect" style="width:50px;height:${h}%;background:${c};opacity:.85"></div><span style="font-size:10px;color:var(--mu)">${l}</span></div>`;}).join("")}</div>
+    <div class="sg" style="margin-top:10px">${[{l:"Revenue",v:rev,c:"var(--gr)"},{l:"Expense",v:exp,c:"var(--rd)"},{l:"Net Profit",v:net,c:net>=0?"var(--pu)":"var(--rd)"}].map(({l,v,c})=>`<div style="background:var(--c2);border:.5px solid var(--bd);border-radius:var(--rs);padding:11px"><div style="font-size:10px;color:var(--mu);margin-bottom:2px">${l}</div><div style="font-size:14px;font-weight:700;color:${c}">${fa(v)}</div></div>`).join("")}</div>
+  </div>`;
+}
+
+function renderClients(biz){
+  const clients=biz.clients||[];
+  return`<div class="c"><div class="row" style="margin-bottom:9px"><div class="stit">Clients (${clients.length})</div><button onclick="openBizModal('client','${biz.id}')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
+    ${clients.length===0?`<div class="empty"><div class="ei">👤</div>No clients yet</div>`:clients.map(c=>`<div class="txc" style="cursor:default"><div><div style="font-size:12px;font-weight:600">${esc(c.name)}</div><div style="font-size:10px;color:var(--mu)">${esc(c.contact||"")}</div></div><button onclick="delBizItem('clients','${c.id}','${biz.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px">✕</button></div>`).join("")}
+  </div>`;
+}
+
+function renderProjects(biz){
+  const projs=biz.projects||[];
+  const SC={Pending:"sb-pending","In Progress":"sb-progress",Completed:"sb-done"};
+  const PC={Paid:"sb-paid","Partial Paid":"sb-partial",Unpaid:"sb-unpaid"};
+  return`<div class="c"><div class="row" style="margin-bottom:9px"><div class="stit">Projects (${projs.length})</div><button onclick="openBizModal('project','${biz.id}')" style="background:var(--pud);color:var(--pu);border:.5px solid rgba(124,111,255,.25);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;font-family:inherit">+ Add</button></div>
+    ${projs.length===0?`<div class="empty"><div class="ei">📋</div>No projects yet</div>`:projs.map(p=>`<div class="txc" style="cursor:default"><div style="flex:1"><div class="row"><div style="font-size:12px;font-weight:600">${esc(p.name)}</div><span style="font-weight:700;color:var(--gr)">${fa(p.value||0)}</span></div><div style="display:flex;gap:5px;margin-top:4px;flex-wrap:wrap"><span class="status-badge ${SC[p.status]||"sb-pending"}">${p.status}</span><span class="status-badge ${PC[p.payStatus]||"sb-unpaid"}">${p.payStatus}</span></div></div><button onclick="delBizItem('projects','${p.id}','${biz.id}')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:13px;padding:3px;margin-left:8px">✕</button></div>`).join("")}
+  </div>`;
+}
+
+// Generic biz tx
+function openGenBizTx(bizId,flow){
+  const biz=getBiz(bizId);if(!biz)return;
+  const body=document.getElementById("gmodal-body");
+  body.innerHTML=`
+    <div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${flow==="in"?"Add Income":"Add Expense"}</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+    <div class="f"><label class="lbl">Description</label><input id="gbt-desc" placeholder="e.g. Client payment, Rent..."/></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <div class="f"><label class="lbl">Amount</label><input id="gbt-amt" type="number" placeholder="0"/></div>
+      <div class="f"><label class="lbl">Account</label><select id="gbt-acc">${ACCS.map(a=>`<option>${a}</option>`).join("")}</select></div>
+    </div>
+    <div class="f"><label class="lbl">Date</label><input type="date" id="gbt-date" value="${nowD()}"/></div>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
+      <button class="btn btgh" onclick="closeModal('gmodal')">Cancel</button>
+      <button class="btn ${flow==="in"?"btg":"btr"}" onclick="saveGenBizTx('${bizId}','${flow}')">Save</button>
+    </div>`;
+  document.getElementById("gmodal").classList.add("open");
+}
+function saveGenBizTx(bizId,flow){
+  const biz=getBiz(bizId);if(!biz)return;
+  const amt=Number(document.getElementById("gbt-amt").value);
+  if(!amt||amt<=0){alert("Invalid input");return;}
+  if(!biz.ledger)biz.ledger=[];
+  const date=document.getElementById("gbt-date").value||nowD();
+  biz.ledger.push(mkLedgerEntry(flow==="in"?"income":"cost",{flow,desc:document.getElementById("gbt-desc").value,amount:amt,account:document.getElementById("gbt-acc").value,date}));
+  closeModal("gmodal");
+  saveS();
+  renderBizTabContent(biz,getBizTab(bizId));
+  renderDash();
+}
+function delGenLedgerEntry(bizId,entryId){
+  const biz=getBiz(bizId);if(!biz)return;
+  biz.ledger=(biz.ledger||[]).filter(e=>e.id!==entryId);
+  saveS();
+  renderBizTabContent(biz,getBizTab(bizId));
+  renderDash();
+}
+function delBizItem(listKey,itemId,bizId){
+  const biz=getBiz(bizId);if(!biz)return;
+  if(biz[listKey])biz[listKey]=biz[listKey].filter(x=>x.id!==itemId);
+  saveS();
+  renderBizTabContent(biz,getBizTab(bizId));
+}
+
+// Biz create/edit
+function openBizCreate(){
+  const body=document.getElementById("bmodal-body");
+  body.innerHTML=buildBizForm(null);
+  document.getElementById("bmodal").classList.add("open");
+}
+function openBizEdit(id){
+  const biz=getBiz(id);
+  const body=document.getElementById("bmodal-body");
+  body.innerHTML=buildBizForm(biz);
+  document.getElementById("bmodal").classList.add("open");
+}
+function buildBizForm(biz){
+  return`<div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">${biz?(S.lang==="bn"?"সম্পাদনা":"Edit Business"):(S.lang==="bn"?"নতুন ব্যবসা":"Create Business")}</span><button onclick="closeModal('bmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div>
+  <div class="f"><label class="lbl">${S.lang==="bn"?"ব্যবসার নাম":"Business Name"} *</label><input id="bf-name" value="${esc(biz?.name||"")}" placeholder="${S.lang==="bn"?"যেমন: রহমান স্টোর":"e.g. Rahman Store"}"/></div>
+  <div class="f"><label class="lbl">${S.lang==="bn"?"ব্যবসার ধরন":"Business Type"}</label><select id="bf-type">${BIZ_TYPES.map(t=>`<option${biz?.type===t?" selected":""}>${t}</option>`).join("")}</select></div>
+  <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px">
+    <button class="btn btgh" onclick="closeModal('bmodal')">${gl("cancel")}</button>
+    <button class="btn btp" onclick="saveBiz('${biz?.id||""}')">${biz?(S.lang==="bn"?"আপডেট":"Update"):(S.lang==="bn"?"তৈরি করুন":"Create")}</button>
+  </div>`;
+}
 function saveBiz(editId){
-  const name=document.getElementById("bname").value.trim();
-  const type=document.getElementById("btype").value;
+  const name=document.getElementById("bf-name").value.trim();
+  const type=document.getElementById("bf-type").value;
   if(!name)return;
   if(editId){
     const i=S.businesses.findIndex(b=>b.id===editId);
     if(i>=0){S.businesses[i].name=name;S.businesses[i].type=type;}
   }else{
-    const biz={id:uid(),name,type,ledger:[],clients:[],projects:[],inventory:[],custDues:[],suppDues:[],createdAt:nowD()};
-    S.businesses.push(biz);
+    S.businesses.push({id:uid(),name,type,ledger:[],products:[],customers:[],companies:[],clients:[],projects:[],shortlist:[],createdAt:nowD()});
   }
-  saveS();closeModal("biz-modal");renderBizRoot();
+  saveS();closeModal("bmodal");renderBizRoot();
 }
 function deleteBiz(id){
-  if(!confirm("Delete this business and all its data?"))return;
+  if(!confirm(S.lang==="bn"?"এই ব্যবসা মুছবেন?":"Delete this business?"))return;
   S.businesses=S.businesses.filter(b=>b.id!==id);
   if(S.activeBizId===id)S.activeBizId=null;
   saveS();renderBizRoot();renderDash();
 }
-function saveBizTx(flow){
-  const biz=activeBiz();if(!biz)return;
-  const amt=Number(document.getElementById("btamt").value);
-  if(!amt||amt<=0)return;
-  const tx={id:uid(),flow,desc:document.getElementById("btdesc").value,cat:document.getElementById("btcat").value,account:document.getElementById("btacc").value,amount:amt,date:document.getElementById("btdate").value||nowD()};
-  if(!biz.ledger)biz.ledger=[];
-  biz.ledger.unshift(tx);
-  saveS();closeModal("biz-modal");renderBizTab(biz);renderDash();renderAlerts();
-}
-function delBizTx(bizId,txId){
+
+function openBizModal(type,bizId){
   const biz=getBiz(bizId);if(!biz)return;
-  biz.ledger=(biz.ledger||[]).filter(t=>t.id!==txId);
-  saveS();renderBizTab(biz);renderDash();
+  const body=document.getElementById("gmodal-body");
+  if(type==="client"){
+    body.innerHTML=`<div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">Add Client</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div><div class="f"><label class="lbl">Client Name *</label><input id="cl-name" placeholder="Full Name"/></div><div class="f"><label class="lbl">Contact</label><input id="cl-contact" placeholder="Phone/Email"/></div><div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px"><button class="btn btgh" onclick="closeModal('gmodal')">Cancel</button><button class="btn btp" onclick="saveClient('${bizId}')">Save</button></div>`;
+  }else if(type==="project"){
+    const clients=(biz.clients||[]).map(c=>c.name);
+    body.innerHTML=`<div class="row" style="margin-bottom:12px"><span style="font-size:15px;font-weight:700">Add Project</span><button onclick="closeModal('gmodal')" style="background:none;border:none;color:var(--mu);cursor:pointer;font-size:20px;line-height:1">✕</button></div><div class="f"><label class="lbl">Project Name *</label><input id="pj-name" placeholder="Project title"/></div><div class="f"><label class="lbl">Client</label><select id="pj-client"><option value="">— Select —</option>${clients.map(c=>`<option>${c}</option>`).join("")}</select></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="f"><label class="lbl">Value</label><input id="pj-val" type="number" placeholder="0"/></div><div class="f"><label class="lbl">Due Date</label><input type="date" id="pj-due"/></div><div class="f"><label class="lbl">Status</label><select id="pj-status"><option>Pending</option><option>In Progress</option><option>Completed</option></select></div><div class="f"><label class="lbl">Payment</label><select id="pj-pay"><option>Unpaid</option><option>Partial Paid</option><option>Paid</option></select></div></div><div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:4px"><button class="btn btgh" onclick="closeModal('gmodal')">Cancel</button><button class="btn btp" onclick="saveProject('${bizId}')">Save</button></div>`;
+  }
+  document.getElementById("gmodal").classList.add("open");
 }
-function saveClient(){
-  const biz=activeBiz();if(!biz)return;
-  const name=document.getElementById("clname").value.trim();if(!name)return;
+function saveClient(bizId){
+  const biz=getBiz(bizId);if(!biz)return;
+  const name=document.getElementById("cl-name").value.trim();if(!name)return;
   if(!biz.clients)biz.clients=[];
-  biz.clients.push({id:uid(),name,contact:document.getElementById("clcontact").value,notes:document.getElementById("clnotes").value});
-  saveS();closeModal("biz-modal");renderBizTab(biz);
+  biz.clients.push({id:uid(),name,contact:document.getElementById("cl-contact").value});
+  saveS();closeModal("gmodal");renderBizTabContent(biz,getBizTab(bizId));
 }
-function saveProject(){
-  const biz=activeBiz();if(!biz)return;
-  const name=document.getElementById("pjname").value.trim();if(!name)return;
+function saveProject(bizId){
+  const biz=getBiz(bizId);if(!biz)return;
+  const name=document.getElementById("pj-name").value.trim();if(!name)return;
   if(!biz.projects)biz.projects=[];
-  biz.projects.push({id:uid(),name,client:document.getElementById("pjclient").value,value:Number(document.getElementById("pjvalue").value)||0,due:document.getElementById("pjdue").value,status:document.getElementById("pjstatus").value,payStatus:document.getElementById("pjpay").value});
-  saveS();closeModal("biz-modal");renderBizTab(biz);renderDash();
-}
-function saveProduct(){
-  const biz=activeBiz();if(!biz)return;
-  const name=document.getElementById("prname").value.trim();if(!name)return;
-  if(!biz.inventory)biz.inventory=[];
-  biz.inventory.push({id:uid(),name,stock:Number(document.getElementById("prstock").value)||0,minStock:Number(document.getElementById("prmin").value)||5,buyPrice:Number(document.getElementById("prbuy").value)||0,sellPrice:Number(document.getElementById("prsell").value)||0,cat:document.getElementById("prcat").value,supplier:document.getElementById("prsupplier").value});
-  saveS();closeModal("biz-modal");renderBizTab(biz);renderAlerts();
-}
-function recordSale(){
-  const biz=activeBiz();if(!biz)return;
-  const pid=document.getElementById("salepr").value;
-  const qty=Number(document.getElementById("saleqty").value)||1;
-  const price=Number(document.getElementById("saleprice").value)||0;
-  const prod=biz.inventory?.find(p=>p.id===pid);
-  if(!prod){alert("Select a product");return;}
-  if(prod.stock<qty){alert("Not enough stock");return;}
-  prod.stock-=qty;
-  const total=price*qty;
-  if(!biz.ledger)biz.ledger=[];
-  biz.ledger.unshift({id:uid(),flow:"in",desc:`Sale: ${prod.name} x${qty}`,cat:"Sale",account:document.getElementById("saleacc").value,amount:total,date:document.getElementById("saledate").value||nowD()});
-  saveS();closeModal("biz-modal");renderBizTab(biz);renderDash();renderAlerts();
-}
-function recordPurchase(){
-  const biz=activeBiz();if(!biz)return;
-  const pid=document.getElementById("purpr").value;
-  const qty=Number(document.getElementById("purqty").value)||1;
-  const price=Number(document.getElementById("purprice").value)||0;
-  const prod=biz.inventory?.find(p=>p.id===pid);
-  if(!prod){alert("Select a product");return;}
-  prod.stock+=qty;
-  const total=price;
-  if(!biz.ledger)biz.ledger=[];
-  biz.ledger.unshift({id:uid(),flow:"out",desc:`Purchase: ${prod.name} x${qty}`,cat:"Purchase",account:document.getElementById("puracc").value,amount:total,date:nowD()});
-  saveS();closeModal("biz-modal");renderBizTab(biz);renderDash();
-}
-function saveDue(type){
-  const biz=activeBiz();if(!biz)return;
-  const name=document.getElementById("duename").value.trim();if(!name)return;
-  const total=Number(document.getElementById("duetotal").value)||0;
-  const paid=Number(document.getElementById("duepaid").value)||0;
-  const due={id:uid(),name,phone:document.getElementById("duephone").value,total,paid,remaining:total-paid,notes:document.getElementById("duenotes").value};
-  if(type==="custDue"){if(!biz.custDues)biz.custDues=[];biz.custDues.push(due);}
-  else{if(!biz.suppDues)biz.suppDues=[];biz.suppDues.push(due);}
-  saveS();closeModal("biz-modal");renderBizTab(biz);renderAlerts();
-}
-function delBizItem(listKey,itemId){
-  const biz=activeBiz();if(!biz)return;
-  if(!biz[listKey])return;
-  biz[listKey]=biz[listKey].filter(x=>x.id!==itemId);
-  saveS();renderBizTab(biz);renderAlerts();
+  biz.projects.push({id:uid(),name,client:document.getElementById("pj-client").value,value:Number(document.getElementById("pj-val").value)||0,due:document.getElementById("pj-due").value,status:document.getElementById("pj-status").value,payStatus:document.getElementById("pj-pay").value});
+  saveS();closeModal("gmodal");renderBizTabContent(biz,getBizTab(bizId));renderDash();
 }
 
-// ── CURRENCY ─────────────────────────────────────────────
+// ══════════════════════════════════════════════════
+// EXPORT
+// ══════════════════════════════════════════════════
+function dl(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();}
+function exportCSV(){
+  const rows=[["Date","Type","Category","Note","Amount","Currency"],...S.txs.map(tx=>[tx.date,tx.type,tx.custom||tx.category,tx.note||"",tx.amount,tx.cur||"BDT"])];
+  dl(new Blob(["\uFEFF"+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")).join("\n")],{type:"text/csv;charset=utf-8"}),`TakaTrack_${nowM()}.csv`);
+}
+function expGrocCSV(bizId){
+  const biz=getBiz(bizId);if(!biz)return;
+  const rows=[["Date","Type","Description","Amount","Account","Profit"],...(biz.ledger||[]).map(e=>[((e.ts||"").split("T")[0]||e.date||""),e.etype,e.desc||"",(e.etype==="sale"?e.revenue:e.etype==="purchase"?e.totalCost:e.amount)||0,e.account||"",(e.profit||"")])];
+  dl(new Blob(["\uFEFF"+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")).join("\n")],{type:"text/csv;charset=utf-8"}),`Grocery_${nowM()}.csv`);
+}
+function buildPDF(title,sum,table){
+  const h=`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${title}</title><style>body{font-family:Arial,sans-serif;padding:26px;color:#111;max-width:700px;margin:0 auto}h1{color:#7c6fff;margin-bottom:3px}.sub{color:#666;font-size:12px;margin-bottom:20px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:22px}.box{background:#f7f9ff;border-radius:8px;padding:12px;border:1px solid #e0e5ff}.bl{font-size:10px;color:#888;margin-bottom:4px;text-transform:uppercase}.bv{font-size:18px;font-weight:700}table{width:100%;border-collapse:collapse;font-size:12px}th{background:#7c6fff;color:#fff;padding:8px 10px;text-align:left}td{padding:7px 10px;border-bottom:1px solid #eee}.inc{color:#00c87a}.exp{color:#ff4d6d}footer{margin-top:22px;font-size:10px;color:#999;text-align:center}</style></head><body><h1>${title}</h1><div class="sub">Generated: ${new Date().toLocaleString()}</div>${sum}${table}<footer>Taka Track v5.1 — Smart Finance Manager</footer></body></html>`;
+  const w=window.open("","_blank");if(w){w.document.write(h);w.document.close();setTimeout(()=>w.print(),500);}
+}
+function exportPDF(){
+  const{s,e}=getDR(S.rperiod||"month");
+  const txs=S.txs.filter(x=>inRange(x.date||"",s,e));
+  const ti=totInc(txs),te=totExp(txs),bal=ti-te;
+  const sum=`<div class="grid"><div class="box"><div class="bl">Income</div><div class="bv" style="color:#00c87a">${fa(ti)}</div></div><div class="box"><div class="bl">Expense</div><div class="bv" style="color:#ff4d6d">${fa(te)}</div></div><div class="box"><div class="bl">Balance</div><div class="bv" style="color:${bal>=0?"#00c87a":"#ff4d6d"}">${fa(bal)}</div></div></div>`;
+  const table=`<table><tr><th>Date</th><th>Type</th><th>Category</th><th>Note</th><th>Amount</th></tr>${txs.sort((a,b)=>b.date.localeCompare(a.date)).map(tx=>`<tr><td>${tx.date}</td><td class="${tx.type}">${tx.type}</td><td>${tx.custom||tx.category}</td><td>${tx.note||""}</td><td class="${tx.type}">${sym()}${tx.amount}</td></tr>`).join("")}</table>`;
+  buildPDF("Taka Track — Finance Report",sum,table);
+}
+function expGrocPDF(bizId){
+  const biz=getBiz(bizId);if(!biz)return;
+  const rev=gTotalRevenue(biz),exp=gTotalPurchaseCost(biz)+gTotalBizCosts(biz),net=gNetProfit(biz),inv=gInvValue(biz);
+  const sum=`<div class="grid"><div class="box"><div class="bl">Revenue</div><div class="bv" style="color:#00c87a">${fa(rev)}</div></div><div class="box"><div class="bl">Expenses</div><div class="bv" style="color:#ff4d6d">${fa(exp)}</div></div><div class="box"><div class="bl">Net Profit</div><div class="bv" style="color:#7c6fff">${fa(net)}</div></div><div class="box"><div class="bl">Inv. Value</div><div class="bv" style="color:#3d8bff">${fa(inv)}</div></div></div>`;
+  const table=`<table><tr><th>Date</th><th>Type</th><th>Description</th><th>Amount</th><th>Profit</th></tr>${(biz.ledger||[]).sort((a,b)=>(b.ts||"").localeCompare(a.ts||"")).map(e=>`<tr><td>${(e.ts||"").split("T")[0]||e.date||""}</td><td>${e.etype}</td><td>${e.desc||""}</td><td class="${e.flow==="in"?"inc":"exp"}">${sym()}${e.etype==="sale"?(e.revenue||0):e.etype==="purchase"?(e.totalCost||0):(e.amount||0)}</td><td>${e.profit!==undefined?fa(e.profit):""}</td></tr>`).join("")}</table>`;
+  buildPDF(`${biz.name} — Grocery Report`,sum,table);
+}
+
+// ══════════════════════════════════════════════════
+// CURRENCY
+// ══════════════════════════════════════════════════
 function setCurSel(){setCur(document.getElementById("csel").value);}
 function setCur(c){
   S.currency=c;document.getElementById("curd").textContent=sym()+" "+c;document.getElementById("csel").value=c;
@@ -999,7 +1548,9 @@ function setCur(c){
 }
 function saveRate(){const v=Number(document.getElementById("rateinp").value);if(v>0){S.customRates[S.currency]=v;saveS();renderAll();}}
 
-// ── PIN ───────────────────────────────────────────────────
+// ══════════════════════════════════════════════════
+// PIN
+// ══════════════════════════════════════════════════
 let piStr="";
 function togglePinSet(){if(!S.pinEnabled)document.getElementById("pmodal").classList.add("open");else{if(confirm("Disable PIN lock?")){S.pinEnabled=false;S.pin="";saveS();applyLang();}}}
 function savePin(){
@@ -1015,75 +1566,45 @@ function chkPin(){if(piStr===S.pin)unlockPin();else{document.getElementById("per
 function updP(){for(let i=0;i<4;i++){const d=document.getElementById("p"+i);if(d)d.className="pd"+(i<piStr.length?" f":"");}}
 function unlockPin(){piStr="";document.getElementById("pins").style.display="none";document.getElementById("app").style.display="flex";}
 
-// ── TABS ─────────────────────────────────────────────────
+// ══════════════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════════════
 function showTab(id){
   document.querySelectorAll(".pg").forEach(p=>p.classList.remove("active"));
   document.querySelectorAll(".nb").forEach(b=>b.classList.remove("active"));
   document.getElementById("page-"+id).classList.add("active");
   document.getElementById("nav-"+id).classList.add("active");
-  const fab=document.getElementById("mainfab");
-  fab.style.display=id==="business"?"none":"flex";
+  document.getElementById("mainfab").style.display=id==="business"?"none":"flex";
   if(id==="reports")renderReports();
   if(id==="business")renderBizRoot();
 }
 
-// ── EXPORT ───────────────────────────────────────────────
-function dl(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();}
-function exportCSV(){
-  const rows=[["Date","Type","Category","Note","Amount","Currency"],...S.txs.map(tx=>[tx.date,tx.type,tx.custom||tx.category,tx.note||"",tx.amount,tx.cur||"BDT"])];
-  dl(new Blob(["\uFEFF"+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")).join("\n")],{type:"text/csv;charset=utf-8"}),`TakaTrack_${nowM()}.csv`);
-}
-function expBizCSV(){
-  const biz=activeBiz();if(!biz)return;
-  const rows=[["Date","Flow","Description","Category","Account","Amount"],...(biz.ledger||[]).map(tx=>[tx.date,tx.flow,tx.desc,tx.cat,tx.account||"Cash",tx.amount])];
-  dl(new Blob(["\uFEFF"+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")).join("\n")],{type:"text/csv;charset=utf-8"}),`Biz_${nowM()}.csv`);
-}
-function buildPDF(title,sum,table){
-  const h=`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${title}</title><style>body{font-family:Arial,sans-serif;padding:26px;color:#111;max-width:700px;margin:0 auto}h1{color:#7c6fff;margin-bottom:3px}.sub{color:#666;font-size:12px;margin-bottom:20px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:22px}.box{background:#f7f9ff;border-radius:8px;padding:12px;border:1px solid #e0e5ff}.bl{font-size:10px;color:#888;margin-bottom:4px;text-transform:uppercase}.bv{font-size:18px;font-weight:700}table{width:100%;border-collapse:collapse;font-size:12px}th{background:#7c6fff;color:#fff;padding:8px 10px;text-align:left}td{padding:7px 10px;border-bottom:1px solid #eee}.inc{color:#00c87a}.exp{color:#ff4d6d}footer{margin-top:22px;font-size:10px;color:#999;text-align:center}</style></head><body><h1>${title}</h1><div class="sub">Generated: ${new Date().toLocaleString()}</div>${sum}${table}<footer>Taka Track v5.0 — Smart Finance Manager</footer></body></html>`;
-  const w=window.open("","_blank");if(w){w.document.write(h);w.document.close();setTimeout(()=>w.print(),500);}
-}
-function exportPDF(){
-  const{s,e}=getDR(S.rperiod||"month");
-  const txs=S.txs.filter(x=>inRange(x.date||"",s,e));
-  const ti=totInc(txs),te=totExp(txs),bal=ti-te;
-  const sum=`<div class="grid"><div class="box"><div class="bl">Income</div><div class="bv" style="color:#00c87a">${fa(ti)}</div></div><div class="box"><div class="bl">Expense</div><div class="bv" style="color:#ff4d6d">${fa(te)}</div></div><div class="box"><div class="bl">Balance</div><div class="bv" style="color:${bal>=0?"#00c87a":"#ff4d6d"}">${fa(bal)}</div></div></div>`;
-  const table=`<table><tr><th>Date</th><th>Type</th><th>Category</th><th>Note</th><th>Amount</th></tr>${txs.sort((a,b)=>b.date.localeCompare(a.date)).map(tx=>`<tr><td>${tx.date}</td><td class="${tx.type}">${tx.type}</td><td>${tx.custom||tx.category}</td><td>${tx.note||""}</td><td class="${tx.type}">${sym()}${tx.amount}</td></tr>`).join("")}</table>`;
-  buildPDF("Taka Track — Finance Report",sum,table);
-}
-function expBizPDF(){
-  const biz=activeBiz();if(!biz)return;
-  const allRev=(biz.ledger||[]).filter(t=>t.flow==="in").reduce((a,b)=>a+(b.amount||0),0);
-  const allExp=(biz.ledger||[]).filter(t=>t.flow==="out").reduce((a,b)=>a+(b.amount||0),0);
-  const net=allRev-allExp;
-  const sum=`<div class="grid"><div class="box"><div class="bl">Revenue</div><div class="bv" style="color:#00c87a">${fa(allRev)}</div></div><div class="box"><div class="bl">Expenses</div><div class="bv" style="color:#ff4d6d">${fa(allExp)}</div></div><div class="box"><div class="bl">Net Profit</div><div class="bv" style="color:#7c6fff">${fa(net)}</div></div></div>`;
-  const table=`<table><tr><th>Date</th><th>Flow</th><th>Description</th><th>Account</th><th>Amount</th></tr>${(biz.ledger||[]).sort((a,b)=>b.date.localeCompare(a.date)).map(tx=>`<tr><td>${tx.date}</td><td class="${tx.flow==="in"?"inc":"exp"}">${tx.flow==="in"?"Income":"Expense"}</td><td>${tx.desc||""}</td><td>${tx.account||"Cash"}</td><td class="${tx.flow==="in"?"inc":"exp"}">${sym()}${tx.amount}</td></tr>`).join("")}</table>`;
-  buildPDF(`${biz.name} — Business Report`,sum,table);
-}
-
-// ── BACKUP / RESTORE ─────────────────────────────────────
+// ══════════════════════════════════════════════════
+// BACKUP / RESTORE / SHARE / CLEAR
+// ══════════════════════════════════════════════════
 function doBackup(){dl(new Blob([JSON.stringify(S,null,2)],{type:"application/json;charset=utf-8"}),`TakaTrack_backup_${Date.now()}.json`);}
 function doRestore(){document.getElementById("rfile").click();}
 function handleRestore(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{const d=JSON.parse(e.target.result);S={...S,...d};saveS();renderAll();alert("Backup restored!");}catch(e){alert("Invalid backup file");}};r.readAsText(f,"UTF-8");ev.target.value="";}
-
-// ── SHARE ─────────────────────────────────────────────────
-function share(p){const url=location.href.split("?")[0];const msg=`Taka Track — Smart Finance App! Track income, expenses & business. Try: ${url}`;if(p==="wa")window.open("https://wa.me/?text="+encodeURIComponent(msg));else if(p==="tg")window.open("https://t.me/share/url?url="+encodeURIComponent(url)+"&text="+encodeURIComponent("Taka Track!"));else if(p==="fb")window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url));else if(p==="cp"){navigator.clipboard?.writeText(url).then(()=>{const el=document.getElementById("scop");el.textContent="Copied!";setTimeout(()=>el.textContent="",2000);});}}
-
-// ── MISC ──────────────────────────────────────────────────
+function share(p){const url=location.href.split("?")[0];const msg=`Taka Track — Smart Finance App! Try: ${url}`;if(p==="wa")window.open("https://wa.me/?text="+encodeURIComponent(msg));else if(p==="tg")window.open("https://t.me/share/url?url="+encodeURIComponent(url));else if(p==="fb")window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url));else if(p==="cp"){navigator.clipboard?.writeText(url).then(()=>{const el=document.getElementById("scop");el.textContent="Copied!";setTimeout(()=>el.textContent="",2000);});}}
 function clearAll(){if(confirm("Clear ALL data permanently?")){S.txs=[];S.businesses=[];S.activeBizId=null;saveS();renderAll();}}
 
-// ── PWA ───────────────────────────────────────────────────
+// ══════════════════════════════════════════════════
+// PWA
+// ══════════════════════════════════════════════════
 function setupPWA(){
   try{const logoUri=svgUri(LOGO);const mf={name:"Taka Track",short_name:"Taka Track",description:"Smart personal & business finance tracker",start_url:"./",display:"standalone",background_color:"#0a0e1a",theme_color:"#0a0e1a",orientation:"portrait-primary",icons:[{src:logoUri,sizes:"192x192",type:"image/svg+xml",purpose:"any"},{src:logoUri,sizes:"512x512",type:"image/svg+xml",purpose:"any"}]};document.getElementById("mph").href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:"application/json"}));}catch(e){}
-  if("serviceWorker" in navigator){try{const sw=`const V='tt5';self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.add('/')));self.skipWaiting();});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))));});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>new Response(''))));});`;navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:"text/javascript"}))).catch(()=>{});}catch(e){}}
+  if("serviceWorker" in navigator){try{const sw=`const V='tt51';self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.add('/')));self.skipWaiting();});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))));});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>new Response(''))));});`;navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:"text/javascript"}))).catch(()=>{});}catch(e){}}
 }
 
-// ── BOOT ──────────────────────────────────────────────────
+// ══════════════════════════════════════════════════
+// BOOT
+// ══════════════════════════════════════════════════
 function boot(){
   setLogo("sl",82);setLogo("pl",66);setLogo("abl",70);
   const prog=document.getElementById("spprog");
   let w=0;
   const iv=setInterval(()=>{
-    w=Math.min(100,w+7);prog.style.width=w+"%";
+    w=Math.min(100,w+8);prog.style.width=w+"%";
     if(w>=100){clearInterval(iv);
       setTimeout(()=>{
         const sp=document.getElementById("spl");sp.style.opacity="0";
@@ -1094,7 +1615,7 @@ function boot(){
         },400);
       },120);
     }
-  },30);
+  },28);
 }
 
 loadS();setupPWA();boot();
