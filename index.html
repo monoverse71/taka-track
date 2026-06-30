@@ -310,7 +310,7 @@ function refreshGrocery(biz){
 function flushBalance(){
   try{
     var mt=mTxs();
-    var ti=totInc(mt),te=totExp(mt),bal=ti-te;
+    var ti=totInc(S.txs),te=totExp(S.txs),bal=ti-te;
     var biz=activeBiz();
     var bizNet=biz&&isGroceryEngine(biz.type)?gNetProfit(biz):0;
     var hbal=document.getElementById('hbal');
@@ -361,7 +361,7 @@ function setLang(l){S.lang=l;saveS();renderAll();}
 // ── DASHBOARD ─────────────────────────────────────────────────────────────────
 function renderDash(){
   var mt=mTxs();
-  var ti=totInc(mt),te=totExp(mt),bal=ti-te;
+  var ti=totInc(S.txs),te=totExp(S.txs),bal=ti-te;
   var biz=activeBiz();
   var bizNet=biz&&isGroceryEngine(biz.type)?gNetProfit(biz):0;
   var hbal=document.getElementById('hbal');
